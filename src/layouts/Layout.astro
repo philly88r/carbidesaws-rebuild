@@ -33,22 +33,49 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://philly88r.github.io/ca
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-white text-gray-900 antialiased">
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-secondary">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-secondary/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
         <a href="/carbidesaws-rebuild/" class="flex items-center">
-          <img src="/carbidesaws-rebuild/logo.png" alt="Carbide Saws Inc." class="h-14 w-auto" />
+          <img src="/carbidesaws-rebuild/logo.png" alt="Carbide Saws Inc." class="h-12 w-auto" />
         </a>
-        <div class="hidden md:flex space-x-8 items-center">
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex space-x-8 items-center">
           <a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="nav-link">Sharpening</a>
           <a href="/carbidesaws-rebuild/industrial-saw-repair" class="nav-link">Repair</a>
           <a href="/carbidesaws-rebuild/custom-saw-blades" class="nav-link">Custom Blades</a>
+          <a href="/carbidesaws-rebuild/circular-saw-blades" class="nav-link">Products</a>
+          <a href="/carbidesaws-rebuild/about" class="nav-link">About</a>
           <a href="/carbidesaws-rebuild/contact" class="btn-primary">Contact Us</a>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-white p-2" aria-label="Toggle menu">
+          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-primary border-t border-secondary/50">
+      <div class="px-4 py-6 space-y-4">
+        <a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="block text-gray-300 hover:text-accent py-2 text-lg">Sharpening</a>
+        <a href="/carbidesaws-rebuild/industrial-saw-repair" class="block text-gray-300 hover:text-accent py-2 text-lg">Repair</a>
+        <a href="/carbidesaws-rebuild/custom-saw-blades" class="block text-gray-300 hover:text-accent py-2 text-lg">Custom Blades</a>
+        <a href="/carbidesaws-rebuild/circular-saw-blades" class="block text-gray-300 hover:text-accent py-2 text-lg">Products</a>
+        <a href="/carbidesaws-rebuild/about" class="block text-gray-300 hover:text-accent py-2 text-lg">About</a>
+        <a href="/carbidesaws-rebuild/contact" class="block btn-primary text-center mt-4">Contact Us</a>
       </div>
     </div>
   </nav>
@@ -59,16 +86,18 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://philly88r.github.io/ca
   </main>
 
   <!-- Footer -->
-  <footer class="bg-primary text-white py-12 mt-20 border-t border-secondary">
+  <footer class="bg-primary text-white py-16 mt-20 border-t border-secondary/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-4 gap-8">
         <div>
           <img src="/carbidesaws-rebuild/logo.png" alt="Carbide Saws Inc." class="h-12 w-auto mb-4 brightness-200" />
-          <p class="text-gray-400">Your GO-TO-SOURCE in the Eastern United States for saw blade manufacturing and servicing since 1954.</p>
+          <p class="text-gray-400 leading-relaxed">
+            Your GO-TO-SOURCE in the Eastern United States for saw blade manufacturing and servicing since 1954.
+          </p>
         </div>
         <div>
-          <h4 class="font-semibold mb-4 text-accent">Services</h4>
-          <ul class="space-y-2 text-gray-400">
+          <h4 class="font-semibold mb-4 text-accent text-lg">Services</h4>
+          <ul class="space-y-3 text-gray-400">
             <li><a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="hover:text-accent transition">Saw Sharpening</a></li>
             <li><a href="/carbidesaws-rebuild/industrial-saw-repair" class="hover:text-accent transition">Blade Repair</a></li>
             <li><a href="/carbidesaws-rebuild/custom-saw-blades" class="hover:text-accent transition">Custom Manufacturing</a></li>
@@ -76,27 +105,71 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://philly88r.github.io/ca
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold mb-4 text-accent">Products</h4>
-          <ul class="space-y-2 text-gray-400">
+          <h4 class="font-semibold mb-4 text-accent text-lg">Products</h4>
+          <ul class="space-y-3 text-gray-400">
             <li><a href="/carbidesaws-rebuild/circular-saw-blades" class="hover:text-accent transition">Circular Blades</a></li>
             <li><a href="/carbidesaws-rebuild/band-saw-blades" class="hover:text-accent transition">Band Saw Blades</a></li>
             <li><a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="hover:text-accent transition">Carbide Tipped</a></li>
+            <li><a href="/carbidesaws-rebuild/custom-saw-blades" class="hover:text-accent transition">Custom Cutter Heads</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold mb-4 text-accent">Contact</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li>High Point, NC</li>
-            <li>Serving NC, SC, VA, Eastern TN</li>
-            <li>Nationwide Shipping</li>
-            <li><a href="/carbidesaws-rebuild/contact" class="hover:text-accent transition">Get a Quote</a></li>
+          <h4 class="font-semibold mb-4 text-accent text-lg">Contact</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              High Point, NC
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+              </svg>
+              NC, SC, VA, Eastern TN
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Nationwide Shipping
+            </li>
+            <li><a href="/carbidesaws-rebuild/contact" class="hover:text-accent transition flex items-center mt-2">
+              <svg class="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              Get a Quote
+            </a></li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-secondary mt-8 pt-8 text-center text-gray-500">
+      <div class="border-t border-secondary/50 mt-12 pt-8 text-center text-gray-500">
         <p>&copy; 2024 Carbide Saws Inc. All rights reserved. | Authorized Freud Service Center</p>
       </div>
     </div>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+      menuIcon?.classList.toggle('hidden');
+      closeIcon?.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking a link
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon?.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+      });
+    });
+  </script>
 </body>
 </html>

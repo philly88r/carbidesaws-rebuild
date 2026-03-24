@@ -1,94 +1,237 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const features = [
+  {
+    title: "Custom Design",
+    description: "We design blades specifically for your material and cutting requirements, optimizing tooth geometry, grade selection, and plate design."
+  },
+  {
+    title: "Premium Materials",
+    description: "We use only high-quality carbide grades and precision-ground steel plates from trusted suppliers."
+  },
+  {
+    title: "Expert Engineering",
+    description: "Our engineers have decades of experience designing blades for the most demanding applications."
+  },
+  {
+    title: "Fast Turnaround",
+    description: "Most custom orders ship within 2-3 weeks. Rush service available when you need blades fast."
+  }
+];
+
+const carbideGrades = [
+  {
+    grade: "C-2",
+    cobalt: "6-10%",
+    description: "General purpose grade offering the best balance of hardness and toughness. Ideal for softwoods and general cutting.",
+    applications: "Softwoods, hardwoods, plywood, MDF"
+  },
+  {
+    grade: "C-3",
+    cobalt: "4-6%",
+    description: "Harder grade with excellent wear resistance. Perfect for abrasive materials and high-volume production.",
+    applications: "Particleboard, MDF, laminates, plastics"
+  },
+  {
+    grade: "C-4",
+    cobalt: "2-4%",
+    description: "Maximum hardness for extreme wear resistance. Best for non-ferrous metals and high-silica woods.",
+    applications: "Aluminum, brass, high-silica hardwoods"
+  },
+  {
+    grade: "Micro-Grain",
+    cobalt: "Varies",
+    description: "Sub-micron grain structure provides superior edge retention and finish quality.",
+    applications: "Fine finish work, premium applications"
+  }
+];
+
+const processSteps = [
+  "Consultation - We discuss your application, material, and requirements",
+  "Design - Our engineers create a blade design optimized for your needs",
+  "Quote - We provide a detailed quote with specifications and delivery time",
+  "Manufacturing - Your blades are precision-manufactured to exact tolerances",
+  "Quality Control - Every blade is inspected and tested before shipment",
+  "Delivery - Your custom blades arrive ready to cut"
+];
 ---
 
 <Layout 
-  title="Custom Saw Blades | Engineered for Your Application"
-  description="Custom engineered saw blades designed for your specific material and machine requirements. Premium carbide grades, precision tooth geometry, application optimization."
+  title="Custom Saw Blades & Cutter Heads | Carbide Saws Inc. High Point NC"
+  description="Custom engineered saw blades and cutter heads designed for your specific application. Premium carbide grades, precision manufacturing. Serving NC, SC, VA, Eastern TN."
 >
-  <section class="gradient-hero text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Hero -->
+  <section class="gradient-hero text-white py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-15">
+      <img src="/carbidesaws-rebuild/gallery-3.jpg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Custom Saw Blades</h1>
-        <p class="text-xl text-blue-100">
-          Engineered-to-order blades optimized for your specific material and cutting requirements.
+        <div class="inline-block bg-accent/20 border border-accent/30 rounded-full px-4 py-2 mb-6">
+          <span class="text-accent font-semibold text-sm tracking-wider uppercase">Engineered to Order</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">
+          Custom Saw Blades & Cutter Heads
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+          When standard blades don't meet your needs, we engineer custom cutting solutions 
+          designed specifically for your material, machine, and application requirements. 
+          From concept to cutting, we deliver precision performance.
         </p>
+        <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+          Start Your Custom Design
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="prose-custom">
-        <h2>When Standard Blades Fall Short</h2>
-        <p>
-          Standard off-the-shelf blades are often the weakest link in high-volume industrial cutting operations. 
-          Materials with unique properties—high-silica hardwoods, abrasive composites, hardened steels—destroy 
-          general-purpose blades prematurely.
+  <!-- Features -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Why Choose Custom?</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Standard blades are designed for general use. When you have specific requirements, 
+          custom-engineered blades deliver superior performance and longer life.
         </p>
+      </div>
 
-        <h3>The Material Science of Custom Carbide</h3>
-        <p>
-          Our custom blades utilize premium sub-micron grade carbides, optimized for specific wear patterns. 
-          By matching the binder chemistry to your workpiece, we significantly extend sharpening intervals.
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {features.map(feature => (
+          <div class="feature-card card-hover text-center">
+            <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">{feature.title}</h3>
+            <p class="text-gray-600">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Carbide Grades -->
+  <section class="section-padding bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Carbide Grade Selection</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We offer a full range of carbide grades to match your specific cutting requirements. 
+          Our engineers will recommend the optimal grade for your application.
         </p>
+      </div>
 
-        <h4>Carbide Grades Available</h4>
-        <ul>
-          <li><strong>C-2 Grade:</strong> 6-10% cobalt for general-purpose with balance of hardness and toughness</li>
-          <li><strong>C-3 Grade:</strong> 4-6% cobalt for abrasive materials like particleboard and MDF</li>
-          <li><strong>C-4 Grade:</strong> 2-4% cobalt for non-ferrous metals and high-silica content woods</li>
-          <li><strong>Micro-Grain:</strong> Sub-micron grain structure for maximum edge retention</li>
-        </ul>
+      <div class="grid md:grid-cols-2 gap-8">
+        {carbideGrades.map(grade => (
+          <div class="feature-card card-hover">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-primary" style="font-family: 'Roboto Slab', serif;">Grade {grade.grade}</h3>
+              <span class="bg-accent/20 text-primary px-3 py-1 rounded-full text-sm font-semibold">{grade.cobalt} Cobalt</span>
+            </div>
+            <p class="text-gray-600 mb-4">{grade.description}</p>
+            <div>
+              <span class="text-sm font-semibold text-primary">Best for:</span>
+              <p class="text-gray-600">{grade.applications}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-        <h3>Engineering Precision Tooth Geometry</h3>
-        <p>
-          Every custom blade is designed using advanced CAD/CAM software to determine optimal:
-        </p>
-        <ul>
-          <li><strong>Rake Angles:</strong> Positive for aggressive cutting, negative for hardened materials</li>
-          <li><strong>Clearance Angles:</strong> Prevent rubbing while maintaining tooth strength</li>
-          <li><strong>Gullet Volume:</strong> Matched to chip size and evacuation requirements</li>
-          <li><strong>Tooth Count:</strong> Balanced for cut quality and feed rate</li>
-        </ul>
-
-        <h3>Custom Manufacturing Process</h3>
-        <ol class="list-decimal list-inside space-y-2 text-gray-700 mb-6">
-          <li><strong>Application Analysis:</strong> Material properties, cutting parameters, machine specifications</li>
-          <li><strong>CAD Design:</strong> 3D modeling of tooth geometry and blade body</li>
-          <li><strong>Carbide Selection:</strong> Grade optimization for your specific application</li>
-          <li><strong>CNC Manufacturing:</strong> Precision grinding with diamond wheels</li>
-          <li><strong>Quality Verification:</strong> Measurement and test cutting validation</li>
-        </ol>
-
-        <h3>Specifications We Customize</h3>
-        <div class="grid md:grid-cols-2 gap-4 my-8">
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <strong class="text-primary">Diameter:</strong> 4" to 84"+
+  <!-- Custom Specifications -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Custom Specifications Available</h2>
+          <p class="text-xl text-gray-600 mb-8">
+            We can manufacture blades to your exact specifications or design them based on your requirements.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-light p-4 rounded-xl">
+              <div class="font-bold text-primary mb-1">Diameter</div>
+              <div class="text-gray-600">4" to 84"+</div>
+            </div>
+            <div class="bg-light p-4 rounded-xl">
+              <div class="font-bold text-primary mb-1">Kerf Width</div>
+              <div class="text-gray-600">0.125" to 0.375"+</div>
+            </div>
+            <div class="bg-light p-4 rounded-xl">
+              <div class="font-bold text-primary mb-1">Arbor Size</div>
+              <div class="text-gray-600">1" to 2.5"+</div>
+            </div>
+            <div class="bg-light p-4 rounded-xl">
+              <div class="font-bold text-primary mb-1">Tooth Count</div>
+              <div class="text-gray-600">12 to 120+</div>
+            </div>
+            <div class="bg-light p-4 rounded-xl">
+              <div class="font-bold text-primary mb-1">Hook Angle</div>
+              <div class="text-gray-600">Custom to application</div>
+            </div>
+            <div class="bg-light p-4 rounded-xl">
+              <div class="font-bold text-primary mb-1">Tooth Style</div>
+              <div class="text-gray-600">ATB, FT, TCG, Hi-ATB</div>
+            </div>
           </div>
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <strong class="text-primary">Kerf:</strong> 0.125" to 0.375"+
-          </div>
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <strong class="text-primary">Arbor:</strong> 1" to 2.5"+
-          </div>
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <strong class="text-primary">Tooth Count:</strong> 24 to 120+
-          </div>
+        </div>
+        <div class="relative">
+          <img src="/carbidesaws-rebuild/gallery-1.jpg" alt="Custom Blades" class="img-rounded w-full" />
         </div>
       </div>
     </div>
   </section>
 
-  <section class="bg-gray-50 py-16">
+  <!-- Process -->
+  <section class="section-padding bg-primary text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="/carbidesaws-rebuild/gallery-2.jpg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Our Custom Design Process</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          From initial consultation to final delivery, we guide you through every step 
+          of the custom blade design process.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {processSteps.map((step, index) => (
+          <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+            <div class="text-4xl font-bold text-accent mb-3" style="font-family: 'Roboto Slab', serif;">0{index + 1}</div>
+            <p class="text-gray-200 leading-relaxed">{step}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-primary mb-4">Need a Custom Solution?</h2>
-      <p class="text-xl text-gray-600 mb-8">
-        Our application engineers will design the optimal blade for your specific requirements.
+      <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Ready for Custom Blades?</h2>
+      <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Contact our engineering team to discuss your custom blade requirements. 
+        We'll help you design the perfect cutting solution for your application.
       </p>
-      <a href="/carbidesaws-rebuild/contact" class="bg-secondary text-white font-bold px-8 py-4 rounded-lg hover:bg-primary transition">
-        Start Custom Design
-      </a>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+          Request Custom Quote
+        </a>
+        <a href="tel:1-800-555-0123" class="btn-secondary text-lg px-8 py-4">
+          Call to Discuss
+        </a>
+      </div>
     </div>
   </section>
 </Layout>

@@ -1,115 +1,234 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const repairServices = [
+  {
+    title: "Tip Replacement",
+    description: "Missing or damaged carbide tips are carefully removed and replaced with new tips of the correct grade. We use high-quality brazing techniques to ensure strong, lasting bonds.",
+    icon: "🔧"
+  },
+  {
+    title: "Crack Repair",
+    description: "Body cracks are stopped and repaired to prevent propagation. Our repair techniques restore structural integrity while maintaining blade balance.",
+    icon: "⚡"
+  },
+  {
+    title: "Body Straightening",
+    description: "Warped or distorted blade bodies are straightened to factory tolerances. This ensures proper tracking and eliminates vibration during cutting.",
+    icon: "📐"
+  },
+  {
+    title: "Re-tensioning",
+    description: "Blades are professionally tensioned to manufacturer specifications. Proper tension prevents flutter, ensures straight cuts, and extends blade life.",
+    icon: "🎯"
+  }
+];
+
+const capabilities = [
+  "Circular saw blades (10\" to 84\" diameter)",
+  "Band saw blades (all widths and lengths)",
+  "Cold saw blades (HSS and cermet)",
+  "Router bits and shaper cutters",
+  "Planer and jointer knives",
+  "Custom cutter heads",
+  "All major brands including Freud, Forrest, Ridge Carbide"
+];
 ---
 
 <Layout 
-  title="Industrial Saw Repair | Complete Blade Restoration Services"
-  description="Professional industrial saw repair including tip replacement, tensioning, and geometry correction. Restore blades others have deemed unrepairable."
+  title="Industrial Saw Repair Services | Carbide Saws Inc. High Point NC"
+  description="Professional industrial saw repair including tip replacement, body repair, tensioning, and geometry correction. We repair blades others discard. Serving NC, SC, VA, Eastern TN."
 >
-  <section class="gradient-hero text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Hero -->
+  <section class="gradient-hero text-white py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-15">
+      <img src="/carbidesaws-rebuild/gallery-2.jpg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Industrial Saw Repair</h1>
-        <p class="text-xl text-blue-100">
-          Complete blade restoration including tip replacement, body repair, and precision tensioning.
+        <div class="inline-block bg-accent/20 border border-accent/30 rounded-full px-4 py-2 mb-6">
+          <span class="text-accent font-semibold text-sm tracking-wider uppercase">Complete Restoration</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">
+          Industrial Saw Repair Services
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+          Don't discard damaged blades—let our expert technicians restore them to like-new condition. 
+          We specialize in repairing blades that other shops won't touch, saving you thousands in 
+          replacement costs.
         </p>
+        <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+          Request Repair Assessment
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
+  <!-- Repair Services -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Our Repair Services</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          From minor touch-ups to major restoration, we have the skills and equipment 
+          to bring your damaged blades back to life.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        {repairServices.map(service => (
+          <div class="feature-card card-hover">
+            <div class="text-4xl mb-4">{service.icon}</div>
+            <h3 class="text-2xl font-bold text-primary mb-4" style="font-family: 'Roboto Slab', serif;">{service.title}</h3>
+            <p class="text-gray-600 leading-relaxed">{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="section-padding bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">What We Can Repair</h2>
+          <p class="text-xl text-gray-600 mb-8">
+            Our repair capabilities cover the full spectrum of industrial cutting tools. 
+            No job is too big or too small.
+          </p>
+          <ul class="space-y-4">
+            {capabilities.map(cap => (
+              <li class="flex items-center text-gray-700 text-lg">
+                <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                {cap}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="relative">
+          <img src="/carbidesaws-rebuild/gallery-1.jpg" alt="Repair Shop" class="img-rounded w-full" />
+          <div class="absolute -bottom-6 -right-6 bg-accent text-primary p-6 rounded-2xl shadow-xl hidden md:block">
+            <div class="text-4xl font-bold" style="font-family: 'Roboto Slab', serif;">We Fix</div>
+            <div class="text-lg font-semibold">What Others Won't</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">The Repair Process</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Every repair follows our rigorous quality process to ensure lasting results.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Assessment</h3>
+          <p class="text-gray-600">We thoroughly inspect your blade and provide a detailed repair estimate before any work begins.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Repair</h3>
+          <p class="text-gray-600">Our technicians perform the necessary repairs using precision equipment and quality materials.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Quality Check</h3>
+          <p class="text-gray-600">Every repaired blade undergoes rigorous testing to ensure it meets our high standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Content -->
+  <section class="section-padding bg-light">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="prose-custom">
-        <h2>The Industrial Saw Repair Imperative</h2>
-        <p>
-          In high-stakes manufacturing environments, the condition of your cutting tools is a primary driver 
-          of operational efficiency. An industrial saw represents significant capital investment, and its 
-          performance is directly tied to blade health.
-        </p>
-
-        <h3>Technical Specifications We Restore</h3>
-        <p>Effective repair begins with understanding the blade's original design parameters:</p>
+        <h2>Common Blade Problems We Solve</h2>
         
-        <h4>Tooth Geometry and Form</h4>
-        <ul>
-          <li><strong>Tooth Pitch:</strong> Distance between teeth, dictating chip load per tooth</li>
-          <li><strong>Gullet Depth:</strong> Chip evacuation space behind the cutting edge</li>
-          <li><strong>Rake Angle:</strong> Controls cutting aggressiveness (positive, negative, or straight)</li>
-          <li><strong>Set Pattern:</strong> Raker set or wavy set for proper kerf width</li>
-        </ul>
-
-        <h4>Blade Body Specifications</h4>
-        <ul>
-          <li><strong>Material:</strong> HSS, TCT, Solid Carbide, or Bi-Metal substrates</li>
-          <li><strong>Tension:</strong> Stretched to specific PSI to prevent deflection</li>
-          <li><strong>Body Thickness:</strong> Checked for uniformity and flatness</li>
-        </ul>
-
-        <h3>Specialized Repair Capabilities</h3>
-        <div class="grid md:grid-cols-2 gap-6 my-8">
-          <div class="bg-gray-50 p-6 rounded-xl">
-            <h4 class="font-bold text-primary mb-2">Tip Re-brazing</h4>
-            <p class="text-gray-700">Missing or cracked carbide tips removed, seat cleaned, new tips silver-brazed with controlled furnace process.</p>
-          </div>
-          <div class="bg-gray-50 p-6 rounded-xl">
-            <h4 class="font-bold text-primary mb-2">Body Straightening</h4>
-            <p class="text-gray-700">Warped or stretched blade bodies restored to flatness for proper tracking.</p>
-          </div>
-          <div class="bg-gray-50 p-6 rounded-xl">
-            <h4 class="font-bold text-primary mb-2">Crack Repair</h4>
-            <p class="text-gray-700">Body cracks stopped and repaired to prevent propagation and catastrophic failure.</p>
-          </div>
-          <div class="bg-gray-50 p-6 rounded-xl">
-            <h4 class="font-bold text-primary mb-2">Re-tensioning</h4>
-            <p class="text-gray-700">Blades stretched to manufacturer specifications (25,000-35,000 PSI) for straight tracking.</p>
-          </div>
-        </div>
-
-        <h3>The CarbideSaws.com Difference</h3>
+        <h3>Missing or Broken Carbide Tips</h3>
         <p>
-          We routinely recover blades other shops have deemed "unrepairable" through our advanced 
-          tip-indexing and metallurgical expertise. Our turnaround times are designed for production 
-          schedules, not the other way around.
+          Carbide tips can chip, crack, or break due to impact with nails, knots, or foreign objects. 
+          Our tip replacement service removes the damaged tip, prepares the seat, and brazes a new tip 
+          in place using high-strength silver solder. The new tip is then ground to match the existing 
+          tooth geometry.
         </p>
 
-        <h3>Professional Vendor Comparison</h3>
-        <div class="bg-gray-50 p-6 rounded-xl my-8 overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="border-b-2 border-gray-200">
-                <th class="text-left py-3 font-semibold text-primary">Vendor Type</th>
-                <th class="text-left py-3 font-semibold text-primary">Best For</th>
-              </tr>
-            </thead>
-            <tbody class="text-gray-700">
-              <tr class="border-b border-gray-200">
-                <td class="py-3 font-medium">Local Machine Shop</td>
-                <td class="py-3">Non-critical, occasional use blades</td>
-              </tr>
-              <tr class="border-b border-gray-200">
-                <td class="py-3 font-medium">OEM Service Dept</td>
-                <td class="py-3">Warranty repairs, proprietary designs</td>
-              </tr>
-              <tr class="bg-blue-50">
-                <td class="py-3 font-medium text-secondary">CarbideSaws.com</td>
-                <td class="py-3">Production environments requiring maximum uptime</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <h3>Body Cracks and Damage</h3>
+        <p>
+          Blade bodies can develop cracks from fatigue, impact, or improper tension. We stop-drill cracks 
+          to prevent propagation and use specialized welding techniques to restore structural integrity. 
+          After repair, the blade is re-tensioned to ensure proper performance.
+        </p>
+
+        <h3>Warped or Distorted Blades</h3>
+        <p>
+          Heat buildup, improper storage, or impact can cause blade bodies to warp. Our straightening 
+          process uses controlled pressure and heat to restore the blade to factory flatness tolerances. 
+          This eliminates vibration and ensures accurate tracking.
+        </p>
+
+        <h3>Loss of Tension</h3>
+        <p>
+          Over time, blades can lose tension due to heat cycling and stress. Symptoms include flutter, 
+          poor cut quality, and premature bearing wear. Our re-tensioning service stretches the blade 
+          body to restore proper stiffness and cutting stability.
+        </p>
+
+        <h3>Worn or Damaged Gullets</h3>
+        <p>
+          The gullet (the space between teeth) can become worn or cracked, reducing chip clearance and 
+          causing poor cut quality. We can repair or reshape gullets to restore proper chip evacuation.
+        </p>
+
+        <h3>When to Repair vs. Replace</h3>
+        <p>
+          Not every damaged blade is worth repairing. Our honest assessment will tell you whether repair 
+          is cost-effective. Generally, blades with multiple missing tips, body cracks, or significant 
+          wear can still be repaired if the body thickness is adequate. We won't waste your money on 
+          repairs that won't last.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="bg-gray-50 py-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-primary mb-4">Have Damaged Blades?</h2>
-      <p class="text-xl text-gray-600 mb-8">
-        Send us blades others couldn't fix. We'll assess repairability at no charge.
+  <!-- CTA -->
+  <section class="section-padding gradient-hero text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Have Damaged Blades?</h2>
+      <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Send us your damaged blades for a free repair assessment. We'll tell you honestly 
+        whether repair is worthwhile and provide a firm quote.
       </p>
-      <a href="/carbidesaws-rebuild/contact" class="bg-secondary text-white font-bold px-8 py-4 rounded-lg hover:bg-primary transition">
-        Request Assessment
-      </a>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+          Get Repair Quote
+        </a>
+        <a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="btn-secondary text-white border-white/50 hover:bg-white hover:text-primary text-lg px-8 py-4">
+          Sharpening Services
+        </a>
+      </div>
     </div>
   </section>
 </Layout>

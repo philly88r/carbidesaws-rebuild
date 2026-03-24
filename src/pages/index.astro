@@ -4,40 +4,38 @@ import Layout from '../layouts/Layout.astro';
 const services = [
   {
     title: "Carbide Saw Sharpening",
-    description: "Precision CNC grinding with CBN and diamond wheels. Restore blade performance to OEM specifications.",
+    description: "Precision CNC grinding with CBN and diamond wheels. Restore blade performance to OEM specifications with our expert sharpening services.",
     href: "/carbidesaws-rebuild/carbide-saw-sharpening",
-    icon: "⚙️"
+    icon: "/carbidesaws-rebuild/icon-sharpening.png"
   },
   {
     title: "Industrial Saw Repair",
-    description: "Complete blade restoration including tip replacement, tensioning, and geometry correction.",
+    description: "Complete blade restoration including tip replacement, tensioning, and geometry correction. We repair blades others discard.",
     href: "/carbidesaws-rebuild/industrial-saw-repair",
-    icon: "🔧"
+    icon: "/carbidesaws-rebuild/icon-repair.png"
   },
   {
     title: "Custom Saw Blades",
-    description: "Engineered-to-order carbide and bi-metal blades for your specific material requirements.",
+    description: "Engineered-to-order carbide and bi-metal blades designed specifically for your unique material and cutting requirements.",
     href: "/carbidesaws-rebuild/custom-saw-blades",
-    icon: "📐"
+    icon: "/carbidesaws-rebuild/icon-custom.png"
+  },
+  {
+    title: "Nationwide Service",
+    description: "Pickup and delivery throughout NC, SC, VA, and Eastern Tennessee. We also ship nationwide for customers outside our local area.",
+    href: "/carbidesaws-rebuild/contact",
+    icon: "/carbidesaws-rebuild/icon-service.png"
   }
 ];
 
-const features = [
+const testimonials = [
   {
-    title: "Since 1954",
-    description: "Over 70 years of experience in saw blade manufacturing and service."
+    text: "Carbide Saws has been our go-to for blade sharpening for over 10 years. Their quality and turnaround time are unmatched.",
+    author: "Industrial Woodworking Client"
   },
   {
-    title: "Freud Authorized",
-    description: "Official service center for Freud tools and blades."
-  },
-  {
-    title: "Regional Service",
-    description: "Pickup and delivery in NC, SC, VA, and Eastern Tennessee."
-  },
-  {
-    title: "Nationwide Shipping",
-    description: "We ship anywhere in the United States."
+    text: "The custom blades they manufactured for our specialty application outlasted anything we'd tried before. Highly recommended.",
+    author: "Metal Fabrication Shop Owner"
   }
 ];
 ---
@@ -47,25 +45,33 @@ const features = [
   description="In business since 1954, we are your GO-TO-SOURCE in the Eastern United States for the manufacture and servicing of saw blades and custom cutter heads. Authorized Freud service center."
 >
   <!-- Hero Section -->
-  <section class="gradient-hero text-white py-24 lg:py-32">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="gradient-hero text-white min-h-[90vh] flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <img src="/carbidesaws-rebuild/gallery-1.jpg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
       <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6" style="font-family: 'Roboto Slab', serif;">
+        <div class="inline-block bg-accent/20 border border-accent/30 rounded-full px-4 py-2 mb-6">
+          <span class="text-accent font-semibold text-sm tracking-wider uppercase">Serving the Eastern United States Since 1954</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-balance" style="font-family: 'Roboto Slab', serif;">
           Saw Repair and Sharpening Service in <span class="text-accent">High Point, NC</span>
         </h1>
-        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-          We know you are busy so let's "CUT" to the chase! In business since 1954, we are your GO-TO-SOURCE 
-          in the Eastern United States for the manufacture and servicing of saw blades and custom cutter heads. 
-          We are also an authorized service center for Freud.
+        <p class="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed text-balance">
+          We know you are busy so let's "CUT" to the chase! We are your GO-TO-SOURCE 
+          for the manufacture and servicing of saw blades and custom cutter heads. 
+          Authorized Freud service center.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="/carbidesaws-rebuild/contact" class="btn-primary">
-            Get a Quote
+          <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+            Get a Free Quote
             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
           </a>
-          <a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="btn-secondary text-white border-white hover:bg-white hover:text-primary">
+          <a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="btn-secondary text-white border-white/50 hover:bg-white hover:text-primary text-lg px-8 py-4">
             Our Services
           </a>
         </div>
@@ -73,28 +79,56 @@ const features = [
     </div>
   </section>
 
+  <!-- Trust Bar -->
+  <section class="bg-light py-8 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-center">
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span class="font-semibold text-primary">Authorized Freud Service Center</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span class="font-semibold text-primary">Pickup & Delivery Available</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span class="font-semibold text-primary">Nationwide Shipping</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Services Grid -->
-  <section class="py-20 bg-white">
+  <section class="section-padding bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" style="font-family: 'Roboto Slab', serif;">Professional Saw Services</h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Professional Saw Services</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Committed to your complete convenience and satisfaction. We provide expert technical advice on 
           sharpening, retipping, re-tensioning, and cleaning of carbide tipped tooling.
         </p>
       </div>
       
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map(service => (
-          <a href={service.href} class="group bg-white border border-gray-200 rounded-2xl p-8 card-hover">
-            <div class="text-4xl mb-4">{service.icon}</div>
+          <a href={service.href} class="group feature-card card-hover text-center">
+            <div class="feature-icon mx-auto">
+              <img src={service.icon} alt="" class="w-10 h-10 object-contain" />
+            </div>
             <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-accent transition" style="font-family: 'Roboto Slab', serif;">
               {service.title}
             </h3>
-            <p class="text-gray-600 mb-4">{service.description}</p>
-            <span class="text-accent font-semibold inline-flex items-center">
+            <p class="text-gray-600 leading-relaxed">{service.description}</p>
+            <span class="inline-flex items-center text-accent font-semibold mt-4 group-hover:translate-x-1 transition">
               Learn more
-              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
             </span>
@@ -104,98 +138,139 @@ const features = [
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="py-20 bg-light">
+  <!-- About Section with Image -->
+  <section class="section-padding bg-light">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {features.map(feature => (
-          <div class="text-center">
-            <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-              </svg>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Four Generations of Excellence</h2>
+          <div class="prose-custom">
+            <p>
+              Since 1954, Carbide Saws Inc. has served as the premier saw blade manufacturing and service 
+              company in the Eastern United States. Our commitment to quality craftsmanship and customer 
+              satisfaction has made us the GO-TO-SOURCE for woodworking professionals, metal fabricators, 
+              and industrial manufacturers.
+            </p>
+            <p>
+              We are proud to be an <strong>authorized service center for Freud</strong>, the world's leading 
+              manufacturer of premium cutting tools. This partnership allows us to provide factory-authorized 
+              service and warranty repairs on all Freud products.
+            </p>
+          </div>
+          <div class="grid grid-cols-3 gap-6 mt-8">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">70+</div>
+              <div class="text-gray-600">Years Experience</div>
             </div>
-            <h3 class="text-lg font-bold text-primary mb-2" style="font-family: 'Roboto Slab', serif;">{feature.title}</h3>
-            <p class="text-gray-600">{feature.description}</p>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">4</div>
+              <div class="text-gray-600">States Served</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">100%</div>
+              <div class="text-gray-600">Satisfaction</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/carbidesaws-rebuild/gallery-1.jpg" alt="Carbide Saws Workshop" class="img-rounded w-full" />
+          <div class="absolute -bottom-6 -left-6 bg-accent text-primary p-6 rounded-2xl shadow-xl hidden md:block">
+            <div class="text-3xl font-bold" style="font-family: 'Roboto Slab', serif;">Est. 1954</div>
+            <div class="text-sm font-semibold">Family Owned & Operated</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Section -->
+  <section class="section-padding bg-primary text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="/carbidesaws-rebuild/gallery-2.jpg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Our Service Area</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          We provide pick-up and delivery services throughout the region. 
+          Outside our local area? We ship nationwide!
+        </p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center border border-white/20">
+          <div class="text-5xl mb-4">🏭</div>
+          <h3 class="text-2xl font-bold text-accent mb-2" style="font-family: 'Roboto Slab', serif;">North Carolina</h3>
+          <p class="text-gray-300">Full state coverage with pickup & delivery</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center border border-white/20">
+          <div class="text-5xl mb-4">🌲</div>
+          <h3 class="text-2xl font-bold text-accent mb-2" style="font-family: 'Roboto Slab', serif;">South Carolina</h3>
+          <p class="text-gray-300">Full state coverage with pickup & delivery</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center border border-white/20">
+          <div class="text-5xl mb-4">⚙️</div>
+          <h3 class="text-2xl font-bold text-accent mb-2" style="font-family: 'Roboto Slab', serif;">Virginia</h3>
+          <p class="text-gray-300">Full state coverage with pickup & delivery</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center border border-white/20">
+          <div class="text-5xl mb-4">🔧</div>
+          <h3 class="text-2xl font-bold text-accent mb-2" style="font-family: 'Roboto Slab', serif;">Eastern Tennessee</h3>
+          <p class="text-gray-300">Regional coverage with pickup & delivery</p>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <p class="text-lg text-gray-300 mb-6">Need service outside these areas? We ship nationwide!</p>
+        <a href="/carbidesaws-rebuild/contact" class="btn-primary">
+          Contact Us for Shipping
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">What Our Customers Say</h2>
+        <p class="text-xl text-gray-600">Trusted by professionals across the Eastern United States</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {testimonials.map(t => (
+          <div class="feature-card">
+            <svg class="w-10 h-10 text-accent mb-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">{t.text}</p>
+            <p class="font-semibold text-primary">— {t.author}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Service Area Section -->
-  <section class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Service Area</h2>
-      <p class="text-xl text-gray-600 mb-8">
-        We provide pick-up and delivery services in <strong>North Carolina, South Carolina, Virginia, and Eastern Tennessee</strong>. 
-        We also ship nationwide for customers outside our local service area.
-      </p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <div class="bg-light p-4 rounded-lg">
-          <span class="font-bold text-primary">North Carolina</span>
-        </div>
-        <div class="bg-light p-4 rounded-lg">
-          <span class="font-bold text-primary">South Carolina</span>
-        </div>
-        <div class="bg-light p-4 rounded-lg">
-          <span class="font-bold text-primary">Virginia</span>
-        </div>
-        <div class="bg-light p-4 rounded-lg">
-          <span class="font-bold text-primary">Eastern Tennessee</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEO Content Section -->
-  <section class="py-20 bg-light">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="prose-custom">
-        <h2>The Industrial Saw Sharpening Imperative</h2>
-        <p>
-          In the high-stakes environments of metal fabrication, sawmill operations, and heavy industrial manufacturing, 
-          the condition of your cutting tools is not a secondary concern—it is a primary driver of operational efficiency, 
-          product quality, and bottom-line profitability.
-        </p>
-        <p>
-          An industrial saw represents a significant capital investment. Its performance is directly tied to the health 
-          of its blade. When a blade dulls, chips, or fails, the consequences are immediate: increased scrap rates, 
-          poor surface finishes, excessive machine wear, dangerous vibration, and unplanned downtime.
-        </p>
-        
-        <h3>Precision Grinding Technology</h3>
-        <p>
-          Our sharpening process utilizes multi-axis CNC grinding machines with flood coolant systems to ensure 
-          the tempering of HSS or carbide tips is never compromised. By restoring original factory specifications, 
-          we extend blade life by up to 300% compared to standard manual sharpening methods.
-        </p>
-
-        <h3>Complete Service Portfolio</h3>
-        <ul>
-          <li><strong>Circular Saw Blades:</strong> 10" to 84" diameter, all tooth configurations</li>
-          <li><strong>Band Saw Blades:</strong> Bi-metal and carbide-tipped, all widths</li>
-          <li><strong>Cold Saw Blades:</strong> HSS and cermet for metal cutting</li>
-          <li><strong>Custom Engineering:</strong> Application-specific blade design</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
   <!-- CTA Section -->
-  <section class="gradient-hero text-white py-20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Ready to Optimize Your Cutting Operation?</h2>
-      <p class="text-xl text-gray-300 mb-8">
+  <section class="section-padding gradient-hero text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Ready to Optimize Your Cutting Operation?</h2>
+      <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
         Contact our application engineers for a complimentary assessment of your blade fleet. 
         Satisfaction guaranteed on all services.
       </p>
-      <a href="/carbidesaws-rebuild/contact" class="btn-primary">
-        Request a Quote
-        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-        </svg>
-      </a>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+          Request a Free Quote
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        <a href="tel:1-800-555-0123" class="btn-white text-lg px-8 py-4">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          Call Now
+        </a>
+      </div>
     </div>
   </section>
 </Layout>
