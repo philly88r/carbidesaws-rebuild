@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Cold Saw Sharpening | HSS & Cermet Blade Services"
+  description="Professional cold saw sharpening services for HSS and cermet blades. CNC precision grinding to restore factory geometry and extend blade life."
+>
+  <section class="gradient-hero text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Cold Saw Sharpening</h1>
+        <p class="text-xl text-blue-100">
+          Precision sharpening for HSS and cermet cold saw blades used in metal fabrication.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose-custom">
+        <h2>The Material Science of Cold Sawing</h2>
+        <p>
+          Cold sawing uses circular blades at low rotational speeds with high torque to cut metal without 
+          generating excessive heat. Unlike abrasive cutting, which can alter metallurgical properties, 
+          cold sawing produces minimal heat—preserving the structural integrity of the cut edge.
+        </p>
+
+        <h3>Blade Materials</h3>
+        <div class="grid md:grid-cols-2 gap-6 my-8">
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <h4 class="font-bold text-primary mb-2">High-Speed Steel (HSS)</h4>
+            <p class="text-gray-700">Standard for general metal cutting. Tough and forgiving. Can be resharpened multiple times.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <h4 class="font-bold text-primary mb-2">Cermet</h4>
+            <p class="text-gray-700">Ceramic-metal composite. Higher cutting speeds possible. Exceptional wear resistance for production environments.</p>
+          </div>
+        </div>
+
+        <h3>Critical Geometry Parameters</h3>
+        <p>
+          Cold saw sharpening requires maintaining exact tooth geometry. Even slight deviations cause vibration, 
+          poor finish, and premature failure:
+        </p>
+
+        <div class="bg-gray-50 p-6 rounded-xl my-8">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b-2 border-gray-200">
+                <th class="text-left py-3 font-semibold text-primary">Parameter</th>
+                <th class="text-left py-3 font-semibold text-primary">Function</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr class="border-b border-gray-200">
+                <td class="py-3 font-medium">Rake Angle</td>
+                <td class="py-3">Controls chip formation and cutting force</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-3 font-medium">Clearance Angle</td>
+                <td class="py-3">Prevents rubbing and heat buildup</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-3 font-medium">Chip Breaker</td>
+                <td class="py-3">Controls chip size for evacuation</td>
+              </tr>
+              <tr>
+                <td class="py-3 font-medium">Tooth Height</td>
+                <td class="py-3">Differential height for chip formation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Our Sharpening Process</h3>
+        <ol class="list-decimal list-inside space-y-2 text-gray-700 mb-6">
+          <li><strong>Inspection:</strong> Measure current geometry and identify wear patterns</li>
+          <li><strong>Cleaning:</strong> Remove chips, coolant residue, and built-up material</li>
+          <li><strong>CNC Grinding:</strong> Multi-axis machines with flood coolant restore exact angles</li>
+          <li><strong>Chip Breaker Grinding:</strong> Restore chip control geometry</li>
+          <li><strong>Quality Check:</strong> Verify all angles and surface finish</li>
+        </ol>
+
+        <h3>Applications</h3>
+        <ul>
+          <li><strong>Ferrous Metals:</strong> Mild steel, stainless, tool steel cutting</li>
+          <li><strong>Non-Ferrous:</strong> Aluminum, brass, copper, bronze</li>
+          <li><strong>Tubing and Pipe:</strong> Clean, burr-free cuts</li>
+          <li><strong>Solid Stock:</strong> Bar and rod cutting</li>
+          <li><strong>Structural:</strong> Angle iron, channel, I-beam</li>
+        </ul>
+
+        <h3>Maximizing Blade Life</h3>
+        <ul>
+          <li>Use proper cutting fluid at correct concentration</li>
+          <li>Maintain recommended cutting speed (SFPM)</li>
+          <li>Don't force feed—let the blade cut at its rate</li>
+          <li>Ensure workpiece is securely clamped</li>
+          <li>Sharpen at first signs of dulling, not after failure</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-primary mb-4">Cold Saw Blade Service</h2>
+      <p class="text-xl text-gray-600 mb-8">
+        Fast turnaround for HSS and cermet cold saw sharpening.
+      </p>
+      <a href="/carbidesaws-rebuild/contact" class="bg-secondary text-white font-bold px-8 py-4 rounded-lg hover:bg-primary transition">
+        Get Quote
+      </a>
+    </div>
+  </section>
+</Layout>

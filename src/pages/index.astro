@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    title: "Carbide Saw Sharpening",
+    description: "Precision CNC grinding with CBN and diamond wheels. Restore blade performance to OEM specifications.",
+    href: "/carbidesaws-rebuild/carbide-saw-sharpening",
+    icon: "⚙️"
+  },
+  {
+    title: "Industrial Saw Repair",
+    description: "Complete blade restoration including tip replacement, tensioning, and geometry correction.",
+    href: "/carbidesaws-rebuild/industrial-saw-repair",
+    icon: "🔧"
+  },
+  {
+    title: "Custom Saw Blades",
+    description: "Engineered-to-order carbide and bi-metal blades for your specific material requirements.",
+    href: "/carbidesaws-rebuild/custom-saw-blades",
+    icon: "📐"
+  }
+];
+
+const features = [
+  {
+    title: "CNC Precision",
+    description: "Computer-controlled grinding ensures every tooth meets exact specifications."
+  },
+  {
+    title: "Rapid Turnaround",
+    description: "24-48 hour service for standard sharpening. Emergency service available."
+  },
+  {
+    title: "All Brands",
+    description: "Blackhawk, Amada, Behringer, and all major industrial saw manufacturers."
+  },
+  {
+    title: "Technical Support",
+    description: "Application engineers available to optimize your cutting parameters."
+  }
+];
+---
+
+<Layout 
+  title="Professional Carbide Saw Services | CarbideSaws.com"
+  description="Expert carbide saw sharpening, industrial blade repair, and custom saw manufacturing. CNC precision grinding for all major brands."
+>
+  <!-- Hero Section -->
+  <section class="gradient-hero text-white py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+          Industrial Saw Sharpening & <span class="text-accent">Custom Manufacturing</span>
+        </h1>
+        <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+          Precision CNC grinding services for carbide-tipped, bi-metal, and high-speed steel blades. 
+          Serving sawmills and metal fabrication facilities since 1985.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/carbidesaws-rebuild/contact" class="bg-accent text-dark font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition inline-flex items-center">
+            Get a Quote
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="bg-white/10 backdrop-blur text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/20 transition">
+            Our Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Professional Saw Services</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          From precision sharpening to complete blade engineering, we deliver industrial-grade results.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        {services.map(service => (
+          <a href={service.href} class="group bg-white border border-gray-200 rounded-2xl p-8 card-hover">
+            <div class="text-4xl mb-4">{service.icon}</div>
+            <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition">
+              {service.title}
+            </h3>
+            <p class="text-gray-600 mb-4">{service.description}</p>
+            <span class="text-secondary font-semibold inline-flex items-center">
+              Learn more
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {features.map(feature => (
+          <div class="text-center">
+            <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary mb-2">{feature.title}</h3>
+            <p class="text-gray-600">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose-custom">
+        <h2>The Industrial Saw Sharpening Imperative</h2>
+        <p>
+          In the high-stakes environments of metal fabrication, sawmill operations, and heavy industrial manufacturing, 
+          the condition of your cutting tools is not a secondary concern—it is a primary driver of operational efficiency, 
+          product quality, and bottom-line profitability.
+        </p>
+        <p>
+          An industrial saw represents a significant capital investment. Its performance is directly tied to the health 
+          of its blade. When a blade dulls, chips, or fails, the consequences are immediate: increased scrap rates, 
+          poor surface finishes, excessive machine wear, dangerous vibration, and unplanned downtime.
+        </p>
+        
+        <h3>Precision Grinding Technology</h3>
+        <p>
+          Our sharpening process utilizes multi-axis CNC grinding machines with flood coolant systems to ensure 
+          the tempering of HSS or carbide tips is never compromised. By restoring original factory specifications, 
+          we extend blade life by up to 300% compared to standard manual sharpening methods.
+        </p>
+
+        <h3>Complete Service Portfolio</h3>
+        <ul>
+          <li><strong>Circular Saw Blades:</strong> 10" to 84" diameter, all tooth configurations</li>
+          <li><strong>Band Saw Blades:</strong> Bi-metal and carbide-tipped, all widths</li>
+          <li><strong>Cold Saw Blades:</strong> HSS and cermet for metal cutting</li>
+          <li><strong>Custom Engineering:</strong> Application-specific blade design</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="gradient-hero text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your Cutting Operation?</h2>
+      <p class="text-xl text-blue-100 mb-8">
+        Contact our application engineers for a complimentary assessment of your blade fleet.
+      </p>
+      <a href="/carbidesaws-rebuild/contact" class="bg-accent text-dark font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition inline-flex items-center">
+        Request a Quote
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,100 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Professional industrial saw sharpening, custom manufacturing, and repair services." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, 'https://philly88r.github.io/carbidesaws-rebuild');
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light text-gray-900 antialiased">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="/carbidesaws-rebuild/" class="text-2xl font-bold text-primary">
+          Carbide<span class="text-secondary">Saws</span>
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="text-gray-700 hover:text-secondary transition">Sharpening</a>
+          <a href="/carbidesaws-rebuild/industrial-saw-repair" class="text-gray-700 hover:text-secondary transition">Repair</a>
+          <a href="/carbidesaws-rebuild/custom-saw-blades" class="text-gray-700 hover:text-secondary transition">Custom Blades</a>
+          <a href="/carbidesaws-rebuild/contact" class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-primary transition">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-16">
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-12 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">CarbideSaws.com</h3>
+          <p class="text-gray-400">Professional industrial saw services since 1985.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Services</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="hover:text-white transition">Saw Sharpening</a></li>
+            <li><a href="/carbidesaws-rebuild/industrial-saw-repair" class="hover:text-white transition">Blade Repair</a></li>
+            <li><a href="/carbidesaws-rebuild/custom-saw-blades" class="hover:text-white transition">Custom Manufacturing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="/carbidesaws-rebuild/circular-saw-blades" class="hover:text-white transition">Circular Blades</a></li>
+            <li><a href="/carbidesaws-rebuild/band-saw-blades" class="hover:text-white transition">Band Saws</a></li>
+            <li><a href="/carbidesaws-rebuild/cold-saw-sharpening" class="hover:text-white transition">Cold Saws</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>sales@carbidesaws.com</li>
+            <li>1-800-SAW-TECH</li>
+            <li><a href="/carbidesaws-rebuild/contact" class="hover:text-white transition">Get a Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 CarbideSaws.com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e3a5f;
+  --color-secondary: #3b82f6;
+  --color-accent: #f59e0b;
+  --color-dark: #0f172a;
+  --color-light: #f8fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.prose-custom h2 {
+  @apply text-3xl font-bold text-primary mt-12 mb-6;
+}
+
+.prose-custom h3 {
+  @apply text-2xl font-semibold text-primary mt-8 mb-4;
+}
+
+.prose-custom p {
+  @apply text-gray-700 leading-relaxed mb-4;
+}
+
+.prose-custom ul {
+  @apply list-disc list-inside space-y-2 mb-6 text-gray-700;
+}
+
+.prose-custom li {
+  @apply leading-relaxed;
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%);
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
