@@ -1,0 +1,87 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const cities = [
+  {name: "Greensboro", slug: "greensboro", description: "Triad's largest city"},
+  {name: "Winston-Salem", slug: "winston-salem", description: "Furniture manufacturing hub"},
+  {name: "Burlington", slug: "burlington", description: "Alamance County center"},
+  {name: "Asheboro", slug: "asheboro", description: "Randolph County"},
+  {name: "Lexington", slug: "lexington", description: "Davidson County"},
+  {name: "Thomasville", slug: "thomasville", description: "Furniture City"},
+  {name: "Kernersville", slug: "kernersville", description: "Triad location"},
+  {name: "Reidsville", slug: "reidsville", description: "Rockingham County"},
+  {name: "Eden", slug: "eden", description: "Northern Piedmont"},
+  {name: "Mount Airy", slug: "mount-airy", description: "Surry County - Mayberry"}
+];
+---
+<Layout title="Service Locations | Carbide Saws Inc. NC" description="Saw blade sharpening and repair services throughout North Carolina, South Carolina, Virginia, and Eastern Tennessee. Find your local service area.">
+<section class="gradient-hero text-white py-24 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Our Service Locations</h1>
+      <p class="text-xl text-gray-300 mb-8">Professional saw blade sharpening and repair services throughout North Carolina, South Carolina, Virginia, and Eastern Tennessee.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">North Carolina Service Areas</h2>
+      <p class="text-xl text-gray-600">Click on your city to learn more about local saw blade services</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {cities.map(city => (
+        <a href={`/carbidesaws-rebuild/locations/${city.slug}`} class="feature-card card-hover text-center">
+          <h3 class="text-xl font-bold text-primary mb-2" style="font-family: 'Roboto Slab', serif;">{city.name}</h3>
+          <p class="text-gray-500 text-sm">{city.description}</p>
+          <span class="inline-flex items-center text-accent font-semibold mt-4">
+            View Services
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section-padding bg-light">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Regional Service Areas</h2>
+      <p class="text-xl text-gray-600">We also provide service throughout these regions</p>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="feature-card text-center">
+        <div class="text-4xl mb-4">🏭</div>
+        <h3 class="text-xl font-bold text-primary mb-2">North Carolina</h3>
+        <p class="text-gray-600 text-sm">Full state coverage with pickup & delivery</p>
+      </div>
+      <div class="feature-card text-center">
+        <div class="text-4xl mb-4">🌲</div>
+        <h3 class="text-xl font-bold text-primary mb-2">South Carolina</h3>
+        <p class="text-gray-600 text-sm">Full state coverage with pickup & delivery</p>
+      </div>
+      <div class="feature-card text-center">
+        <div class="text-4xl mb-4">⚙️</div>
+        <h3 class="text-xl font-bold text-primary mb-2">Virginia</h3>
+        <p class="text-gray-600 text-sm">Full state coverage with pickup & delivery</p>
+      </div>
+      <div class="feature-card text-center">
+        <div class="text-4xl mb-4">🔧</div>
+        <h3 class="text-xl font-bold text-primary mb-2">Eastern Tennessee</h3>
+        <p class="text-gray-600 text-sm">Regional coverage with pickup & delivery</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding gradient-hero text-white text-center">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Don't See Your City?</h2>
+    <p class="text-xl text-gray-300 mb-8">We serve the entire state of NC plus SC, VA, and Eastern TN. Contact us for service in your area.</p>
+    <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">Contact Us</a>
+  </div>
+</section>
+</Layout>

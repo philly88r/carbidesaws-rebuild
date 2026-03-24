@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const cityName = "Burlington";
+const schema = {"@context":"https://schema.org","@type":"LocalBusiness","name":"Carbide Saws Inc.","telephone":"+1-336-434-2111","areaServed":{"@type":"City","name":"Burlington, NC"}};
+---
+<Layout title={`Saw Blade Sharpening in ${cityName}, NC`} description={`Professional saw blade sharpening and repair in ${cityName}, NC. Serving Alamance County manufacturers since 1954.`}>
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<section class="gradient-hero text-white py-24 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Saw Blade Sharpening in {cityName}, NC</h1>
+      <p class="text-xl text-gray-300 mb-8">Professional saw blade services for Burlington and Alamance County. Pickup & delivery available.</p>
+      <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+<section class="section-padding bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="prose-custom">
+      <h2>Saw Blade Services in Burlington, NC</h2>
+      <p>Carbide Saws Inc. provides professional saw blade sharpening and repair services to Burlington manufacturers, woodworking shops, and industrial facilities throughout Alamance County. Our mobile pickup and delivery service makes it convenient to keep your cutting tools sharp.</p>
+      <p>We specialize in carbide-tipped circular saw blades, band saw blades, cold saws, and router bits. Whether you run a cabinet shop, furniture manufacturer, or metal fabrication business in Burlington, we have the expertise to optimize your cutting tools.</p>
+      <h3>Services Available in Burlington</h3>
+      <ul>
+        <li>CNC precision sharpening</li>
+        <li>Tip replacement and repair</li>
+        <li>Custom blade manufacturing</li>
+        <li>Pickup and delivery service</li>
+        <li>24-48 hour standard turnaround</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</Layout>

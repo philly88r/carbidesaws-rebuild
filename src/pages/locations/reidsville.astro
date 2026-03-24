@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const cityName = "Reidsville";
+const schema = {"@context":"https://schema.org","@type":"LocalBusiness","name":"Carbide Saws Inc.","telephone":"+1-336-434-2111","areaServed":{"@type":"City","name":"Reidsville, NC"}};
+---
+<Layout title={`Saw Blade Sharpening in ${cityName}, NC`} description={`Professional saw blade sharpening and repair in ${cityName}, NC. Serving Rockingham County since 1954.`}>
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<section class="gradient-hero text-white py-24 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Saw Blade Sharpening in {cityName}, NC</h1>
+      <p class="text-xl text-gray-300 mb-8">Professional saw blade services for Reidsville and Rockingham County. Pickup & delivery available.</p>
+      <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+<section class="section-padding bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Saw Blade Services in Reidsville, NC</h2>
+    <p class="text-lg text-gray-600 mb-6">Carbide Saws Inc. extends its professional saw blade sharpening and repair services to Reidsville and the surrounding Rockingham County area. Our mobile service makes it convenient for local manufacturers to maintain sharp cutting tools.</p>
+    <p class="text-lg text-gray-600">We handle all types of industrial cutting tools, from circular saw blades to band saws and router bits. Contact us today to schedule pickup or learn more about our services.</p>
+  </div>
+</section>
+</Layout>

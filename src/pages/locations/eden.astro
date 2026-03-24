@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const cityName = "Eden";
+const schema = {"@context":"https://schema.org","@type":"LocalBusiness","name":"Carbide Saws Inc.","telephone":"+1-336-434-2111","areaServed":{"@type":"City","name":"Eden, NC"}};
+---
+<Layout title={`Saw Blade Sharpening in ${cityName}, NC`} description={`Professional saw blade sharpening and repair in ${cityName}, NC. Serving Rockingham County manufacturers.`}>
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<section class="gradient-hero text-white py-24 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Saw Blade Sharpening in {cityName}, NC</h1>
+      <p class="text-xl text-gray-300 mb-8">Professional saw blade services for Eden and the Northern Piedmont. Pickup & delivery available.</p>
+      <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+<section class="section-padding bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Saw Blade Services in Eden, NC</h2>
+    <p class="text-lg text-gray-600 mb-6">Carbide Saws Inc. provides comprehensive saw blade sharpening and repair services to Eden manufacturers and woodworking businesses. Located just a short drive from High Point, we're your local source for precision cutting tool maintenance.</p>
+    <p class="text-lg text-gray-600">Our services include CNC precision sharpening, tip replacement, crack repair, and custom blade manufacturing. Schedule a pickup today and experience the quality that has made us a trusted name since 1954.</p>
+  </div>
+</section>
+</Layout>

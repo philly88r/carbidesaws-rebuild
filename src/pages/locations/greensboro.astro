@@ -1,0 +1,383 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const cityName = "Greensboro";
+const citySlug = "greensboro";
+const nearbyCities = ["High Point", "Burlington", "Winston-Salem", "Asheboro"];
+
+const localServices = [
+  {
+    title: "Saw Blade Sharpening in Greensboro",
+    description: `Professional carbide saw blade sharpening services for Greensboro manufacturers, cabinet shops, and woodworking businesses. We restore circular saws, band saws, and router bits to like-new condition using CNC precision grinding equipment.`,
+    features: ["CNC diamond grinding", "Same-day service available", "All brands serviced", "Pickup & delivery"]
+  },
+  {
+    title: "Industrial Saw Repair",
+    description: `Don't discard damaged blades—our Greensboro repair shop can fix tip damage, cracks, and body distortion. We specialize in repairing blades that other shops won't touch, saving you thousands in replacement costs.`,
+    features: ["Tip replacement", "Crack repair", "Body straightening", "Re-tensioning"]
+  },
+  {
+    title: "Custom Saw Blade Manufacturing",
+    description: `Need blades designed specifically for your Greensboro operation? We engineer custom carbide-tipped and high-speed steel blades optimized for your material, machine, and cutting requirements.`,
+    features: ["Application-specific design", "Premium carbide grades", "Fast turnaround", "All diameters"]
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Carbide Saws Inc.",
+  "image": "https://philly88r.github.io/carbidesaws-rebuild/logo.png",
+  "@id": "https://philly88r.github.io/carbidesaws-rebuild/locations/greensboro",
+  "url": "https://philly88r.github.io/carbidesaws-rebuild/locations/greensboro",
+  "telephone": "+1-336-434-2111",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "High Point",
+    "addressLocality": "High Point",
+    "addressRegion": "NC",
+    "postalCode": "27260",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 36.0726,
+    "longitude": -79.7920
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Greensboro, NC"
+  },
+  "hasMap": "https://www.google.com/maps/search/Carbide+Saws+High+Point+NC",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": [
+    "https://carbidesawsinc.com"
+  ]
+};
+---
+
+<Layout 
+  title={`Saw Blade Sharpening & Repair in ${cityName}, NC | Carbide Saws Inc.`}
+  description={`Professional saw blade sharpening and repair services in ${cityName}, NC. CNC precision grinding, custom blades, pickup & delivery. Serving ${cityName} since 1954. Authorized Freud service center.`}
+>
+  <!-- Schema Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  
+  <!-- Breadcrumbs Schema -->
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://philly88r.github.io/carbidesaws-rebuild/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Locations",
+          "item": "https://philly88r.github.io/carbidesaws-rebuild/locations/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": cityName + ", NC"
+        }
+      ]
+    })}
+  </script>
+
+  <!-- Hero -->
+  <section class="gradient-hero text-white py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-15">
+      <img src="/carbidesaws-rebuild/gallery-1.jpg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <!-- Breadcrumbs -->
+        <nav class="text-sm mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center space-x-2 text-gray-400">
+            <li><a href="/carbidesaws-rebuild/" class="hover:text-accent transition">Home</a></li>
+            <li><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></li>
+            <li><a href="/carbidesaws-rebuild/locations/" class="hover:text-accent transition">Locations</a></li>
+            <li><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></li>
+            <li class="text-accent">{cityName}</li>
+          </ol>
+        </nav>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">
+          Saw Blade Sharpening & Repair in {cityName}, NC
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+          Professional saw blade sharpening and repair services for {cityName} manufacturers, 
+          cabinet shops, and woodworking businesses. Pickup and delivery available. 
+          Authorized Freud service center.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+            Get a Free Quote
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <span class="text-gray-300 flex items-center">
+            <svg class="w-5 h-5 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Serving {cityName} since 1954
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Services -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+          Saw Services in {cityName}
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          From precision sharpening to custom blade manufacturing, we provide complete 
+          cutting tool solutions for {cityName} businesses.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {localServices.map((service, index) => (
+          <div class="feature-card card-hover">
+            <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6">
+              <span class="text-2xl font-bold text-primary">{index + 1}</span>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4" style="font-family: 'Roboto Slab', serif;">{service.title}</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+            <ul class="space-y-2">
+              {service.features.map(feature => (
+                <li class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-accent mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Local -->
+  <section class="section-padding bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+            Your Local {cityName} Saw Shop
+          </h2>
+          <div class="prose-custom">
+            <p>
+              When you need saw blade sharpening or repair in {cityName}, you want a local 
+              shop that understands your business. We're not a faceless online service—we're 
+              your neighbors, located just down the road in High Point.
+            </p>
+            <p>
+              Our pickup and delivery service means you don't have to make a special trip. 
+              We'll come to your {cityName} location, pick up your dull or damaged blades, 
+              and return them sharp and ready to cut. Most sharpening jobs are completed 
+              within 24-48 hours.
+            </p>
+            <p>
+              As an <strong>authorized Freud service center</strong>, we can also handle warranty 
+              repairs and provide genuine Freud replacement parts. Whether you run a cabinet shop, 
+              furniture manufacturer, or metal fabrication business in {cityName}, we have the 
+              expertise to keep your cutting tools performing at their best.
+            </p>
+          </div>
+          <div class="mt-8 p-6 bg-accent/10 border border-accent/30 rounded-2xl">
+            <h4 class="font-bold text-primary mb-2 flex items-center">
+              <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              {cityName} Service Area
+            </h4>
+            <p class="text-gray-700">
+              We provide pickup and delivery throughout {cityName} and surrounding areas including 
+              {nearbyCities.join(", ")}.
+            </p>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/carbidesaws-rebuild/gallery-3.jpg" alt="Saw sharpening workshop" class="img-rounded w-full" />
+          <div class="absolute -bottom-6 -right-6 bg-accent text-primary p-6 rounded-2xl shadow-xl hidden md:block">
+            <div class="text-4xl font-bold" style="font-family: 'Roboto Slab', serif;">24-48h</div>
+            <div class="text-lg font-semibold">Turnaround in {cityName}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+          Industries We Serve in {cityName}
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          From cabinet shops to metal fabricators, we provide cutting tool solutions 
+          for {cityName}'s diverse manufacturing base.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="feature-card text-center">
+          <div class="text-5xl mb-4">🪵</div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Cabinet & Furniture</h3>
+          <p class="text-gray-600">Precision sharpening for cabinet shops and furniture manufacturers throughout {cityName}.</p>
+        </div>
+        <div class="feature-card text-center">
+          <div class="text-5xl mb-4">🏭</div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Metal Fabrication</h3>
+          <p class="text-gray-600">Cold saw blade sharpening and repair for {cityName} metalworking shops.</p>
+        </div>
+        <div class="feature-card text-center">
+          <div class="text-5xl mb-4">🌲</div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Sawmills & Forestry</h3>
+          <p class="text-gray-600">Large diameter circular saw and band saw service for {cityName} timber operations.</p>
+        </div>
+        <div class="feature-card text-center">
+          <div class="text-5xl mb-4">📦</div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Pallet Manufacturing</h3>
+          <p class="text-gray-600">High-volume resaw blade sharpening for {cityName} pallet and crate manufacturers.</p>
+        </div>
+        <div class="feature-card text-center">
+          <div class="text-5xl mb-4">🪨</div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Countertop Fabrication</h3>
+          <p class="text-gray-600">Diamond blade and stone cutting tool service for {cityName} countertop shops.</p>
+        </div>
+        <div class="feature-card text-center">
+          <div class="text-5xl mb-4">🔨</div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">General Contracting</h3>
+          <p class="text-gray-600">Saw blade sharpening for {cityName} contractors and construction companies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-padding bg-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-xl text-gray-600">
+          Common questions about our {cityName} saw blade services
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h3 class="text-lg font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">
+            Do you offer pickup and delivery in {cityName}?
+          </h3>
+          <p class="text-gray-600">
+            Yes! We provide regular pickup and delivery routes throughout {cityName} and the surrounding 
+            Triad area. Contact us to schedule a pickup or arrange for blade delivery.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h3 class="text-lg font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">
+            How long does sharpening take?
+          </h3>
+          <p class="text-gray-600">
+            Standard sharpening service is 24-48 hours. Rush service is available for {cityName} 
+            customers who need blades back faster. We'll give you an exact timeline when you drop off 
+            or schedule pickup.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h3 class="text-lg font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">
+            What types of blades do you sharpen?
+          </h3>
+          <p class="text-gray-600">
+            We sharpen all types of industrial cutting tools including carbide-tipped circular saws, 
+            band saw blades, cold saws, router bits, and shaper cutters. If it cuts, we can sharpen it!
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h3 class="text-lg font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">
+            Can you repair damaged blades?
+          </h3>
+          <p class="text-gray-600">
+            Absolutely. We specialize in blade repair including tip replacement, crack repair, body 
+            straightening, and re-tensioning. Many {cityName} customers are amazed at blades we can 
+            restore that they thought were beyond repair.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby Locations -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+          Nearby Service Areas
+        </h2>
+        <p class="text-xl text-gray-600">
+          We also serve these communities near {cityName}
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        {nearbyCities.map(city => (
+          <a 
+            href={`/carbidesaws-rebuild/locations/${city.toLowerCase().replace(' ', '-')}`} 
+            class="bg-light hover:bg-accent/20 px-6 py-3 rounded-full text-primary font-medium transition card-hover"
+          >
+            {city}, NC
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding gradient-hero text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">
+        Ready for Sharp Blades in {cityName}?
+      </h2>
+      <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Contact us today for a free quote. We provide pickup and delivery throughout 
+        {cityName} and guarantee your satisfaction on every job.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+          Get a Free Quote
+        </a>
+        <a href="tel:336-434-2111" class="btn-secondary text-white border-white/50 hover:bg-white hover:text-primary text-lg px-8 py-4">
+          Call (336) 434-2111
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

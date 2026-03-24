@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const cityName = "Thomasville";
+const schema = {"@context":"https://schema.org","@type":"LocalBusiness","name":"Carbide Saws Inc.","telephone":"+1-336-434-2111","areaServed":{"@type":"City","name":"Thomasville, NC"}};
+---
+<Layout title={`Saw Blade Sharpening in ${cityName}, NC`} description={`Professional saw blade sharpening and repair in ${cityName}, NC. Serving Furniture City manufacturers since 1954.`}>
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<section class="gradient-hero text-white py-24 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Saw Blade Sharpening in {cityName}, NC</h1>
+      <p class="text-xl text-gray-300 mb-8">Professional saw blade services for Thomasville furniture manufacturers. Pickup & delivery available.</p>
+      <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+<section class="section-padding bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="prose-custom">
+      <h2>Saw Blade Services in Thomasville, NC</h2>
+      <p>Thomasville has a legendary reputation as a furniture manufacturing center, and Carbide Saws Inc. has been supporting the industry's cutting tool needs for over 70 years. We understand the precision required for fine furniture production.</p>
+      <p>Our saw blade sharpening and custom manufacturing services help Thomasville furniture makers maintain the quality standards that built the city's reputation. From precision sharpening to custom blade design, we have the expertise you need.</p>
+    </div>
+  </div>
+</section>
+</Layout>

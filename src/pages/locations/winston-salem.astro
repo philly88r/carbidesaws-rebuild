@@ -1,0 +1,170 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const cityName = "Winston-Salem";
+const citySlug = "winston-salem";
+const nearbyCities = ["High Point", "Greensboro", "Kernersville", "Lexington"];
+
+const localServices = [
+  {
+    title: "Saw Blade Sharpening in Winston-Salem",
+    description: "Professional carbide saw blade sharpening for Winston-Salem furniture manufacturers, woodworking shops, and industrial facilities. CNC precision grinding restores your blades to factory specifications.",
+    features: ["CNC diamond grinding", "24-48 hour turnaround", "All major brands", "Free estimates"]
+  },
+  {
+    title: "Industrial Saw Repair",
+    description: "Expert repair services for damaged saw blades in Winston-Salem. We fix broken teeth, cracks, and body distortion—saving you money on replacements.",
+    features: ["Carbide tip replacement", "Body crack repair", "Precision straightening", "Full tensioning"]
+  },
+  {
+    title: "Custom Blade Manufacturing",
+    description: "Engineered-to-order saw blades designed for your Winston-Salem operation. Custom tooth geometry and premium carbide grades for optimal performance.",
+    features: ["Custom tooth design", "Premium carbide grades", "Fast production", "All sizes available"]
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Carbide Saws Inc.",
+  "image": "https://philly88r.github.io/carbidesaws-rebuild/logo.png",
+  "@id": "https://philly88r.github.io/carbidesaws-rebuild/locations/winston-salem",
+  "url": "https://philly88r.github.io/carbidesaws-rebuild/locations/winston-salem",
+  "telephone": "+1-336-434-2111",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "High Point",
+    "addressLocality": "High Point",
+    "addressRegion": "NC",
+    "postalCode": "27260",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 36.0999,
+    "longitude": -80.2442
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Winston-Salem, NC"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ]
+};
+---
+
+<Layout 
+  title={`Saw Blade Sharpening & Repair in ${cityName}, NC | Carbide Saws Inc.`}
+  description={`Professional saw blade sharpening and repair services in ${cityName}, NC. CNC precision grinding, custom blades, pickup & delivery. Serving ${cityName} since 1954.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  
+  <section class="gradient-hero text-white py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-15">
+      <img src="/carbidesaws-rebuild/gallery-1.jpg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <nav class="text-sm mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center space-x-2 text-gray-400">
+            <li><a href="/carbidesaws-rebuild/" class="hover:text-accent transition">Home</a></li>
+            <li><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></li>
+            <li><a href="/carbidesaws-rebuild/locations/" class="hover:text-accent transition">Locations</a></li>
+            <li><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></li>
+            <li class="text-accent">{cityName}</li>
+          </ol>
+        </nav>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">
+          Saw Blade Sharpening & Repair in {cityName}, NC
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+          Professional saw blade sharpening and repair for Winston-Salem furniture manufacturers 
+          and woodworking businesses. Pickup and delivery available. Family owned since 1954.
+        </p>
+        <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+          Saw Services in {cityName}
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {localServices.map((service, index) => (
+          <div class="feature-card card-hover">
+            <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-6">
+              <span class="text-2xl font-bold text-primary">{index + 1}</span>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4" style="font-family: 'Roboto Slab', serif;">{service.title}</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+            <ul class="space-y-2">
+              {service.features.map(feature => (
+                <li class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-accent mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+            Serving Winston-Salem's Furniture Industry
+          </h2>
+          <div class="prose-custom">
+            <p>
+              Winston-Salem has a rich history in furniture manufacturing, and we're proud to support 
+              the industry's continued success. Our precision sharpening services help local furniture 
+              makers, cabinet shops, and millwork businesses maintain the highest quality standards.
+            </p>
+            <p>
+              Whether you're producing fine furniture, commercial cabinetry, or architectural millwork, 
+              we have the expertise to keep your cutting tools performing at their best. Our pickup and 
+              delivery service means minimal downtime for your Winston-Salem operation.
+            </p>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/carbidesaws-rebuild/gallery-2.jpg" alt="Saw sharpening" class="img-rounded w-full" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding gradient-hero text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">
+        Ready for Sharp Blades in {cityName}?
+      </h2>
+      <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+        Get a Free Quote
+      </a>
+    </div>
+  </section>
+</Layout>
