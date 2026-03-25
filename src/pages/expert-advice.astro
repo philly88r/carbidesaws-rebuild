@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const tips = [
+  {
+    title: "When to Sharpen Your Blades",
+    content: "Watch for increased feed pressure, burn marks on material, chipping at exit, unusual vibration, or visible wear on tooth edges. Don't wait for catastrophic failure—sharpen at first signs of dulling."
+  },
+  {
+    title: "Proper Blade Storage",
+    content: "Store blades flat or on proper racks—not hung on pegs which can cause distortion. Keep them clean, dry, and protected from physical impacts and corrosive environments."
+  },
+  {
+    title: "Matching Blade to Material",
+    content: "Use C-2 grade for general purpose, C-3 for abrasive materials like MDF, and C-4 for non-ferrous metals. Using the wrong grade leads to premature wear and poor cut quality."
+  },
+  {
+    title: "Optimal Cutting Speed",
+    content: "Running blades too fast generates excess heat; too slow causes rubbing. Match SFPM (surface feet per minute) to your material for best results and longest blade life."
+  },
+  {
+    title: "Coolant is Critical",
+    content: "Proper coolant flow prevents heat buildup that damages blade temper. Keep coolant clean and at proper concentration. Inadequate coolant is a leading cause of premature blade failure."
+  },
+  {
+    title: "Feed Rate Matters",
+    content: "Excessive feed rate overloads teeth causing micro-chipping. Too slow causes rubbing and heat buildup. Find the sweet spot for your material and blade combination."
+  }
+];
+---
+
+<Layout 
+  title="Expert Saw Blade Advice | Carbide Saws Inc. High Point NC"
+  description="Free expert advice on saw blade selection, maintenance, and optimization from the professionals at Carbide Saws Inc. Serving NC, SC, VA, Eastern TN since 1954."
+>
+  <section class="gradient-hero text-white py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">
+          Expert Saw Blade Advice
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+          With over 70 years of experience, we're happy to share our knowledge. 
+          Get free technical advice on blade selection, maintenance, and optimization 
+          for your specific application.
+        </p>
+        <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+          Get Expert Advice
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+          Professional Tips & Advice
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Learn from our decades of experience in the cutting tool industry
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {tips.map(tip => (
+          <div class="feature-card card-hover">
+            <h3 class="text-xl font-bold text-primary mb-4" style="font-family: 'Roboto Slab', serif;">{tip.title}</h3>
+            <p class="text-gray-600 leading-relaxed">{tip.content}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+          Need Personalized Advice?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Every application is unique. Contact our experts for personalized recommendations 
+          on blade selection, cutting parameters, and maintenance schedules.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="tel:336-434-2111" class="btn-primary text-lg px-8 py-4">
+            Call (336) 434-2111
+          </a>
+          <a href="mailto:info@carbidesawsinc.com" class="btn-secondary text-lg px-8 py-4">
+            Email Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

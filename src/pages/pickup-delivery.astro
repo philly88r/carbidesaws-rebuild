@@ -1,0 +1,164 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const serviceArea = [
+  { city: "High Point", type: "HQ & Full Service" },
+  { city: "Greensboro", type: "Pickup & Delivery" },
+  { city: "Winston-Salem", type: "Pickup & Delivery" },
+  { city: "Burlington", type: "Pickup & Delivery" },
+  { city: "Asheboro", type: "Pickup & Delivery" },
+  { city: "Lexington", type: "Pickup & Delivery" },
+  { city: "Thomasville", type: "Pickup & Delivery" },
+  { city: "Kernersville", type: "Pickup & Delivery" },
+  { city: "Reidsville", type: "Pickup & Delivery" },
+  { city: "Eden", type: "Pickup & Delivery" },
+  { city: "Mount Airy", type: "Pickup & Delivery" }
+];
+---
+
+<Layout 
+  title="Free Pickup & Delivery | Carbide Saws Inc. NC, SC, VA, TN"
+  description="Free pickup and delivery for saw blade sharpening and repair. Serving High Point, Greensboro, Winston-Salem, and throughout NC, SC, VA, and Eastern TN."
+>
+  <section class="gradient-hero text-white py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-block bg-accent/20 border border-accent/30 rounded-full px-4 py-2 mb-6">
+          <span class="text-accent font-semibold text-sm tracking-wider uppercase">Free Service</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">
+          Free Pickup & Delivery
+        </h1>
+        <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+          We make it easy to get your blades sharpened. Free pickup and delivery 
+          throughout the Triad and surrounding areas. We also ship nationwide!
+        </p>
+        <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
+          Schedule Pickup
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+            Convenient Service at No Extra Cost
+          </h2>
+          <div class="prose-custom">
+            <p>
+              We know you're busy running your business. That's why we offer free pickup 
+              and delivery for saw blade sharpening and repair throughout our service area. 
+              No need to take time out of your day to drop off blades—we come to you.
+            </p>
+            <p>
+              Our regular routes cover the Triad and surrounding areas. For businesses 
+              outside our local pickup area, we offer nationwide shipping with competitive rates.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="bg-light p-4 rounded-xl text-center">
+              <div class="text-3xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">FREE</div>
+              <div class="text-gray-600">Local Pickup</div>
+            </div>
+            <div class="bg-light p-4 rounded-xl text-center">
+              <div class="text-3xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">FREE</div>
+              <div class="text-gray-600">Local Delivery</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/carbidesaws-rebuild/gallery-2.jpg" alt="Pickup and delivery service" class="img-rounded w-full" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+          Service Area
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Free pickup and delivery throughout North Carolina, South Carolina, 
+          Virginia, and Eastern Tennessee
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {serviceArea.map(location => (
+          <div class="bg-white p-4 rounded-xl shadow-sm">
+            <div class="font-bold text-primary">{location.city}</div>
+            <div class="text-sm text-gray-500">{location.type}</div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-lg text-gray-600 mb-4">
+          Don't see your city? We serve the entire state of NC plus SC, VA, and Eastern TN.
+        </p>
+        <a href="/carbidesaws-rebuild/contact" class="btn-primary">
+          Contact Us About Your Area
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">
+          How It Works
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-primary">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Schedule</h3>
+          <p class="text-gray-600">Call or email to schedule a pickup at your location</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-primary">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">We Pick Up</h3>
+          <p class="text-gray-600">We come to you and collect your dull or damaged blades</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-primary">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Delivered Sharp</h3>
+          <p class="text-gray-600">We return your blades sharpened and ready to cut</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding gradient-hero text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">
+        Ready for Convenient Service?
+      </h2>
+      <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Schedule your free pickup today. We'll come to you, sharpen your blades, 
+        and return them ready to work.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:336-434-2111" class="btn-primary text-lg px-8 py-4">
+          Call (336) 434-2111
+        </a>
+        <a href="/carbidesaws-rebuild/contact" class="btn-secondary text-white border-white/50 hover:bg-white hover:text-primary text-lg px-8 py-4">
+          Schedule Online
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
