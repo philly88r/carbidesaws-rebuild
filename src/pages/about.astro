@@ -2,12 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 
 const milestones = [
-  { year: "1954", event: "Carbide Saws Inc. founded in High Point, NC" },
-  { year: "1970s", event: "Expanded service area to cover NC, SC, and VA" },
-  { year: "1990s", event: "Added custom blade manufacturing capabilities" },
-  { year: "2000s", event: "Became authorized Freud service center" },
-  { year: "2010s", event: "Added Eastern Tennessee to service area" },
-  { year: "Today", event: "Serving customers nationwide with pickup, delivery, and shipping" }
+  { year: "1954", event: "Carbide Saws Inc. founded by Casey Goodman in High Point, NC" },
+  { year: "1960", event: "Casey Goodman passes; wife Jean takes over the helm" },
+  { year: "1980s", event: "Added Burnette LTD to provide economical tooling services from quality manufacturers" },
+  { year: "Today", event: "Continuing the family tradition, manufacturing products in High Point, NC for over 70 years" }
 ];
 
 const capabilities = [
@@ -40,7 +38,7 @@ const capabilities = [
 
 <Layout 
   title="About Us | Carbide Saws Inc. High Point NC"
-  description="In business since 1954, Carbide Saws Inc. is your GO-TO-SOURCE for saw blade manufacturing and servicing in the Eastern United States. Authorized Freud service center."
+  description="Founded in 1954 by Casey Goodman, Carbide Saws Inc. has served the Eastern United States for over 70 years. Family owned and operated, providing saw blade manufacturing and servicing."
 >
   <!-- Hero -->
   <section class="gradient-hero text-white py-24 lg:py-32 relative overflow-hidden">
@@ -55,11 +53,11 @@ const capabilities = [
           <span class="text-accent font-semibold text-sm tracking-wider uppercase">Since 1954</span>
         </div>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">
-          About Carbide Saws Inc.
+          About Carbide Saws Inc. & Burnette, Ltd.
         </h1>
         <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-          For over 70 years, we've been the GO-TO-SOURCE in the Eastern United States for 
-          the manufacture and servicing of saw blades and custom cutter heads.
+          Founded by Casey Goodman in 1954, we've been your GO-TO-SOURCE for the manufacture 
+          and servicing of saw blades and custom cutter heads for over 70 years.
         </p>
       </div>
     </div>
@@ -73,20 +71,26 @@ const capabilities = [
           <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Our Story</h2>
           <div class="prose-custom">
             <p>
-              Carbide Saws Inc. was founded in 1954 with a simple mission: provide professional 
-              saw blade sharpening and repair services that woodworking and metalworking professionals 
-              could rely on. From our beginnings in High Point, North Carolina, we've grown to become 
-              the premier blade service company in the Eastern United States.
+              Carbide Saws Inc., founded by Casey Goodman in 1954, filled a demand from customers 
+              in the Eastern United States who were in need of "in-house" manufactured tools, 
+              hammering, tensioning and smithing services. The business grew and thrived through 
+              Mr. Goodman's passing in 1960 and his wife Jean's subsequent decision to take over 
+              the helm at that time.
             </p>
             <p>
-              Our commitment to quality craftsmanship and customer satisfaction has never wavered. 
-              We take pride in being the shop that other professionals turn to when they need 
-              precision work done right the first time.
+              In the early 1980s, Carbide Saws Inc. added Burnette LTD to its repertoire to provide 
+              economical and innovative tooling services from reputable, quality manufacturers. 
+              Fast forward to today, and this strong family business continues to manufacture 
+              products at its facility in High Point, North Carolina.
             </p>
             <p>
-              Today, we're proud to be an <strong>authorized service center for Freud</strong>, 
-              the world's leading manufacturer of premium cutting tools. This partnership allows 
-              us to provide factory-authorized service and access to genuine Freud parts and specifications.
+              In business for over 70 years, we have the expert "EDGE" when it comes to the 
+              manufacture and servicing of saw blades and custom cutter heads. We also produce 
+              precision machine parts, wear parts and any related metal components.
+            </p>
+            <p>
+              At Carbide Saws Inc, we "slice" through the competition by providing you the quality 
+              you demand in a timely and efficient manner. Your satisfaction is our number one priority.
             </p>
           </div>
           <div class="grid grid-cols-3 gap-6 mt-8">
@@ -95,20 +99,20 @@ const capabilities = [
               <div class="text-gray-600 text-sm">Years in Business</div>
             </div>
             <div class="text-center p-4 bg-light rounded-2xl">
-              <div class="text-4xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">4</div>
-              <div class="text-gray-600 text-sm">States with Pickup</div>
+              <div class="text-4xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">1954</div>
+              <div class="text-gray-600 text-sm">Year Founded</div>
             </div>
             <div class="text-center p-4 bg-light rounded-2xl">
-              <div class="text-4xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">100%</div>
-              <div class="text-gray-600 text-sm">Satisfaction</div>
+              <div class="text-4xl font-bold text-accent" style="font-family: 'Roboto Slab', serif;">Family</div>
+              <div class="text-gray-600 text-sm">Owned & Operated</div>
             </div>
           </div>
         </div>
         <div class="relative">
           <img src="/carbidesaws-rebuild/gallery-2.jpg" alt="Carbide Saws Workshop" class="img-rounded w-full" />
           <div class="absolute -bottom-6 -right-6 bg-accent text-primary p-6 rounded-2xl shadow-xl hidden md:block">
-            <div class="text-3xl font-bold" style="font-family: 'Roboto Slab', serif;">Family Owned</div>
-            <div class="text-lg font-semibold">& Operated Since 1954</div>
+            <div class="text-3xl font-bold" style="font-family: 'Roboto Slab', serif;">Est. 1954</div>
+            <div class="text-lg font-semibold">High Point, NC</div>
           </div>
         </div>
       </div>
@@ -121,7 +125,7 @@ const capabilities = [
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Our History</h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Seven decades of serving the woodworking and metalworking industries
+          Four generations of serving the woodworking and metalworking industries
         </p>
       </div>
 
@@ -145,8 +149,86 @@ const capabilities = [
     </div>
   </section>
 
-  <!-- Capabilities -->
+  <!-- What We Do -->
   <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">What We Do</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We offer a wide array of quality brands and services to make your production more efficient
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="feature-card text-center">
+          <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <img src="/carbidesaws-rebuild/icon-sharpening.png" alt="" class="w-10 h-10 object-contain" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Sharpening & Repair</h3>
+          <p class="text-gray-600">Expert sharpening service for all types of carbide tipped saw blades and cutting tools.</p>
+        </div>
+        <div class="feature-card text-center">
+          <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <img src="/carbidesaws-rebuild/icon-custom.png" alt="" class="w-10 h-10 object-contain" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Custom Manufacturing</h3>
+          <p class="text-gray-600">In-house manufactured tools including saw blades, custom cutter heads, and precision parts.</p>
+        </div>
+        <div class="feature-card text-center">
+          <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <img src="/carbidesaws-rebuild/icon-repair.png" alt="" class="w-10 h-10 object-contain" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3" style="font-family: 'Roboto Slab', serif;">Hammering & Tensioning</h3>
+          <p class="text-gray-600">Professional smithing services to maintain the quality and performance of your blades.</p>
+        </div>
+      </div>
+
+      <div class="bg-light p-8 rounded-2xl">
+        <h3 class="text-2xl font-bold text-primary mb-4 text-center" style="font-family: 'Roboto Slab', serif;">Products We Offer</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Carbide Tipped Sawblades</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Carbide Tipped MTP Cutters</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Carbide Tipped Router Bits</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Precision Machine Parts</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Wear Parts</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Related Metal Components</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="section-padding bg-light">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Our Capabilities</h2>
@@ -172,7 +254,7 @@ const capabilities = [
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Why Choose Carbide Saws Inc.?</h2>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Experience the difference that 70+ years of expertise makes
+          At Carbide Saws, if we can't get it sharp, it ain't dull!
         </p>
       </div>
 
@@ -193,7 +275,7 @@ const capabilities = [
             </svg>
           </div>
           <h3 class="text-xl font-bold text-accent mb-3" style="font-family: 'Roboto Slab', serif;">Fast Turnaround</h3>
-          <p class="text-gray-300">24-48 hour standard service with rush options available</p>
+          <p class="text-gray-300">Quality work delivered quickly to minimize your downtime</p>
         </div>
         <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 text-center">
           <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -222,8 +304,8 @@ const capabilities = [
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Work With Us</h2>
       <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-        Experience the difference that 70+ years of expertise makes. Contact us today 
-        for a free quote or to discuss your cutting tool needs.
+        Experience the difference that 70+ years of expertise makes. We slice through 
+        the competition by providing you the quality you demand.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">
