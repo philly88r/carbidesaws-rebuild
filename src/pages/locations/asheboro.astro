@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 const cityName = "Asheboro";
-const schema = {"@context":"https://schema.org","@type":"LocalBusiness","name":"Carbide Saws Inc.","telephone":"+1-336-434-2111","areaServed":{"@type":"City","name":"Asheboro, NC"}};
+const schema = {"@context":"https://schema.org","@type":"LocalBusiness","name":"Carbide Saws Inc.","telephone":"+1-800-578-7197","areaServed":{"@type":"City","name":"Asheboro, NC"}};
 ---
 <Layout title={`Saw Blade Sharpening in ${cityName}, NC`} description={`Professional saw blade sharpening and repair in ${cityName}, NC. Serving Randolph County since 1954.`}>
 <script type="application/ld+json" set:html={JSON.stringify(schema)} />
