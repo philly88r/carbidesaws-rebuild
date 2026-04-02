@@ -4,8 +4,6 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://philly88r.github.io',
-  base: '/carbidesaws-rebuild',
   vite: {
     plugins: [tailwindcss()]
   }
