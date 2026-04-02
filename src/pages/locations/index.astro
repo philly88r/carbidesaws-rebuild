@@ -33,7 +33,7 @@ const cities = [
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {cities.map(city => (
-        <a href={`/carbidesaws-rebuild/locations/${city.slug}`} class="feature-card card-hover text-center">
+        <a href={`/locations/${city.slug}`} class="feature-card card-hover text-center">
           <h3 class="text-xl font-bold text-primary mb-2" style="font-family: 'Roboto Slab', serif;">{city.name}</h3>
           <p class="text-gray-500 text-sm">{city.description}</p>
           <span class="inline-flex items-center text-accent font-semibold mt-4">
@@ -81,7 +81,7 @@ const cities = [
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl md:text-4xl font-bold mb-6" style="font-family: 'Roboto Slab', serif;">Don't See Your City?</h2>
     <p class="text-xl text-gray-300 mb-8">We serve the entire state of NC plus SC, VA, and Eastern TN. Contact us for service in your area.</p>
-    <a href="/carbidesaws-rebuild/contact" class="btn-primary text-lg px-8 py-4">Contact Us</a>
+    <a href="/contact" class="btn-primary text-lg px-8 py-4">Contact Us</a>
   </div>
 </section>
 </Layout>

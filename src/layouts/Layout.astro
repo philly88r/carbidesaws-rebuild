@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { title, description = "Carbide Saws Inc. - Professional saw repair and sharpening service in High Point, NC. Serving NC, SC, VA and Eastern TN since 1954." } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, 'https://philly88r.github.io/carbidesaws-rebuild');
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin);
 ---
 
 <!DOCTYPE html>
@@ -41,8 +41,8 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://philly88r.github.io/ca
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
-        <a href="/carbidesaws-rebuild/" class="flex items-center">
-          <img src="/carbidesaws-rebuild/logo.png" alt="Carbide Saws Inc." class="h-12 w-auto" />
+        <a href="/" class="flex items-center">
+          <img src="/logo.png" alt="Carbide Saws Inc." class="h-12 w-auto" />
         </a>
         
         <!-- Desktop Menu -->
@@ -57,34 +57,34 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://philly88r.github.io/ca
             </button>
             <div class="absolute top-full left-0 mt-2 w-64 bg-primary border border-secondary/50 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div class="py-2">
-                <a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="block px-4 py-3 text-gray-300 hover:text-accent hover:bg-white/5 transition">
+                <a href="/carbide-saw-sharpening" class="block px-4 py-3 text-gray-300 hover:text-accent hover:bg-white/5 transition">
                   <span class="font-semibold">Sharpening</span>
                   <span class="block text-sm text-gray-500">Precision CNC grinding</span>
                 </a>
-                <a href="/carbidesaws-rebuild/industrial-saw-repair" class="block px-4 py-3 text-gray-300 hover:text-accent hover:bg-white/5 transition">
+                <a href="/industrial-saw-repair" class="block px-4 py-3 text-gray-300 hover:text-accent hover:bg-white/5 transition">
                   <span class="font-semibold">Repair</span>
                   <span class="block text-sm text-gray-500">Tip replacement & restoration</span>
                 </a>
-                <a href="/carbidesaws-rebuild/custom-saw-blades" class="block px-4 py-3 text-gray-300 hover:text-accent hover:bg-white/5 transition">
+                <a href="/custom-saw-blades" class="block px-4 py-3 text-gray-300 hover:text-accent hover:bg-white/5 transition">
                   <span class="font-semibold">Custom Blades</span>
                   <span class="block text-sm text-gray-500">Engineered to order</span>
                 </a>
                 <div class="border-t border-secondary/50 my-2"></div>
-                <a href="/carbidesaws-rebuild/expert-advice" class="block px-4 py-3 text-gray-300 hover:text-accent hover:bg-white/5 transition">
+                <a href="/expert-advice" class="block px-4 py-3 text-gray-300 hover:text-accent hover:bg-white/5 transition">
                   <span class="font-semibold">Expert Advice</span>
                   <span class="block text-sm text-gray-500">Technical consulting</span>
                 </a>
-                <a href="/carbidesaws-rebuild/pickup-delivery" class="block px-4 py-3 text-gray-300 hover:text-accent hover:bg-white/5 transition">
+                <a href="/pickup-delivery" class="block px-4 py-3 text-gray-300 hover:text-accent hover:bg-white/5 transition">
                   <span class="font-semibold">Free Pickup & Delivery</span>
                   <span class="block text-sm text-gray-500">NC, SC, VA, Eastern TN</span>
                 </a>
               </div>
             </div>
           </div>
-          <a href="/carbidesaws-rebuild/circular-saw-blades" class="nav-link">Products</a>
-          <a href="/carbidesaws-rebuild/locations" class="nav-link">Locations</a>
-          <a href="/carbidesaws-rebuild/about" class="nav-link">About</a>
-          <a href="/carbidesaws-rebuild/contact" class="btn-primary">Contact Us</a>
+          <a href="/circular-saw-blades" class="nav-link">Products</a>
+          <a href="/locations" class="nav-link">Locations</a>
+          <a href="/about" class="nav-link">About</a>
+          <a href="/contact" class="btn-primary">Contact Us</a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -104,16 +104,16 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://philly88r.github.io/ca
       <div class="px-4 py-6 space-y-4">
         <div class="border-b border-secondary/50 pb-4">
           <span class="text-accent font-semibold uppercase tracking-wider text-sm">Services</span>
-          <a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="block text-gray-300 hover:text-accent py-2 text-lg pl-4">Sharpening</a>
-          <a href="/carbidesaws-rebuild/industrial-saw-repair" class="block text-gray-300 hover:text-accent py-2 text-lg pl-4">Repair</a>
-          <a href="/carbidesaws-rebuild/custom-saw-blades" class="block text-gray-300 hover:text-accent py-2 text-lg pl-4">Custom Blades</a>
-          <a href="/carbidesaws-rebuild/expert-advice" class="block text-gray-300 hover:text-accent py-2 text-lg pl-4">Expert Advice</a>
-          <a href="/carbidesaws-rebuild/pickup-delivery" class="block text-gray-300 hover:text-accent py-2 text-lg pl-4">Free Pickup & Delivery</a>
+          <a href="/carbide-saw-sharpening" class="block text-gray-300 hover:text-accent py-2 text-lg pl-4">Sharpening</a>
+          <a href="/industrial-saw-repair" class="block text-gray-300 hover:text-accent py-2 text-lg pl-4">Repair</a>
+          <a href="/custom-saw-blades" class="block text-gray-300 hover:text-accent py-2 text-lg pl-4">Custom Blades</a>
+          <a href="/expert-advice" class="block text-gray-300 hover:text-accent py-2 text-lg pl-4">Expert Advice</a>
+          <a href="/pickup-delivery" class="block text-gray-300 hover:text-accent py-2 text-lg pl-4">Free Pickup & Delivery</a>
         </div>
-        <a href="/carbidesaws-rebuild/circular-saw-blades" class="block text-gray-300 hover:text-accent py-2 text-lg">Products</a>
-        <a href="/carbidesaws-rebuild/locations" class="block text-gray-300 hover:text-accent py-2 text-lg">Locations</a>
-        <a href="/carbidesaws-rebuild/about" class="block text-gray-300 hover:text-accent py-2 text-lg">About</a>
-        <a href="/carbidesaws-rebuild/contact" class="block btn-primary text-center mt-4">Contact Us</a>
+        <a href="/circular-saw-blades" class="block text-gray-300 hover:text-accent py-2 text-lg">Products</a>
+        <a href="/locations" class="block text-gray-300 hover:text-accent py-2 text-lg">Locations</a>
+        <a href="/about" class="block text-gray-300 hover:text-accent py-2 text-lg">About</a>
+        <a href="/contact" class="block btn-primary text-center mt-4">Contact Us</a>
       </div>
     </div>
   </nav>
@@ -128,7 +128,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://philly88r.github.io/ca
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-4 gap-8">
         <div>
-          <img src="/carbidesaws-rebuild/logo.png" alt="Carbide Saws Inc." class="h-12 w-auto mb-4 brightness-200" />
+          <img src="/logo.png" alt="Carbide Saws Inc." class="h-12 w-auto mb-4 brightness-200" />
           <p class="text-gray-400 leading-relaxed">
             Your GO-TO-SOURCE in the Eastern United States for saw blade manufacturing and servicing since 1954.
           </p>
@@ -136,19 +136,19 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://philly88r.github.io/ca
         <div>
           <h4 class="font-semibold mb-4 text-accent text-lg">Services</h4>
           <ul class="space-y-3 text-gray-400">
-            <li><a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="hover:text-accent transition">Saw Sharpening</a></li>
-            <li><a href="/carbidesaws-rebuild/industrial-saw-repair" class="hover:text-accent transition">Blade Repair</a></li>
-            <li><a href="/carbidesaws-rebuild/custom-saw-blades" class="hover:text-accent transition">Custom Manufacturing</a></li>
-            <li><a href="/carbidesaws-rebuild/cold-saw-sharpening" class="hover:text-accent transition">Cold Saw Service</a></li>
+            <li><a href="/carbide-saw-sharpening" class="hover:text-accent transition">Saw Sharpening</a></li>
+            <li><a href="/industrial-saw-repair" class="hover:text-accent transition">Blade Repair</a></li>
+            <li><a href="/custom-saw-blades" class="hover:text-accent transition">Custom Manufacturing</a></li>
+            <li><a href="/cold-saw-sharpening" class="hover:text-accent transition">Cold Saw Service</a></li>
           </ul>
         </div>
         <div>
           <h4 class="font-semibold mb-4 text-accent text-lg">Products</h4>
           <ul class="space-y-3 text-gray-400">
-            <li><a href="/carbidesaws-rebuild/circular-saw-blades" class="hover:text-accent transition">Circular Blades</a></li>
-            <li><a href="/carbidesaws-rebuild/band-saw-blades" class="hover:text-accent transition">Band Saw Blades</a></li>
-            <li><a href="/carbidesaws-rebuild/carbide-saw-sharpening" class="hover:text-accent transition">Carbide Tipped</a></li>
-            <li><a href="/carbidesaws-rebuild/custom-saw-blades" class="hover:text-accent transition">Custom Cutter Heads</a></li>
+            <li><a href="/circular-saw-blades" class="hover:text-accent transition">Circular Blades</a></li>
+            <li><a href="/band-saw-blades" class="hover:text-accent transition">Band Saw Blades</a></li>
+            <li><a href="/carbide-saw-sharpening" class="hover:text-accent transition">Carbide Tipped</a></li>
+            <li><a href="/custom-saw-blades" class="hover:text-accent transition">Custom Cutter Heads</a></li>
           </ul>
         </div>
         <div>
