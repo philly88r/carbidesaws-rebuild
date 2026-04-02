@@ -177,6 +177,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Scrolling brands animation */
 .animate-scroll-brands {
   animation: scroll-brands 30s linear infinite;
+  display: flex;
+  white-space: nowrap;
 }
 
 .animate-scroll-brands:hover {
