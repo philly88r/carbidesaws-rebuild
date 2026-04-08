@@ -1,13 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 const milestones = [
   { year: "1954", event: "Carbide Saws Inc. founded by Casey Goodman in High Point, NC" },
   { year: "1960", event: "Casey Goodman passes; wife Jean takes over the helm" },
   { year: "1980s", event: "Added Burnette LTD to provide economical tooling services from quality manufacturers" },
   { year: "Today", event: "Continuing the family tradition, manufacturing products in High Point, NC for over 70 years" }
 ];
-
 const capabilities = [
   {
     title: "CNC Grinding Equipment",
@@ -35,7 +33,6 @@ const capabilities = [
   }
 ];
 ---
-
 <Layout 
   title="About Us | Carbide Saws Inc. High Point NC"
   description="Founded in 1954 by Casey Goodman, Carbide Saws Inc. has served the Eastern United States for over 70 years. Family owned and operated, providing saw blade manufacturing and servicing."
@@ -62,7 +59,6 @@ const capabilities = [
       </div>
     </div>
   </section>
-
   <!-- Story Section -->
   <section class="section-padding bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,17 +114,15 @@ const capabilities = [
       </div>
     </div>
   </section>
-
   <!-- Timeline -->
   <section class="section-padding bg-light">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6" style="font-family: 'Roboto Slab', serif;">Our History</h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Four generations of serving the woodworking and metalworking industries
+          Three generations of serving the woodworking and metalworking industries
         </p>
       </div>
-
       <div class="relative">
         <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-accent/30 hidden md:block"></div>
         <div class="space-y-8">
@@ -148,7 +142,6 @@ const capabilities = [
       </div>
     </div>
   </section>
-
   <!-- What We Do -->
   <section class="section-padding bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -158,7 +151,6 @@ const capabilities = [
           We offer a wide array of quality brands and services to make your production more efficient
         </p>
       </div>
-
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         <div class="feature-card text-center">
           <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -182,7 +174,6 @@ const capabilities = [
           <p class="text-gray-600">Professional smithing services to maintain the quality and performance of your blades.</p>
         </div>
       </div>
-
       <div class="bg-light p-8 rounded-2xl">
         <h3 class="text-2xl font-bold text-primary mb-4 text-center" style="font-family: 'Roboto Slab', serif;">Products We Offer</h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -226,7 +217,6 @@ const capabilities = [
       </div>
     </div>
   </section>
-
   <!-- Capabilities -->
   <section class="section-padding bg-light">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -236,7 +226,6 @@ const capabilities = [
           State-of-the-art equipment and decades of expertise at your service
         </p>
       </div>
-
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {capabilities.map(cap => (
           <div class="feature-card card-hover">
@@ -247,7 +236,6 @@ const capabilities = [
       </div>
     </div>
   </section>
-
   <!-- Why Choose Us -->
   <section class="section-padding bg-primary text-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -257,7 +245,6 @@ const capabilities = [
           At Carbide Saws, if we can't get it sharp, it ain't dull!
         </p>
       </div>
-
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 text-center">
           <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -298,7 +285,6 @@ const capabilities = [
       </div>
     </div>
   </section>
-
   <!-- CTA -->
   <section class="section-padding bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
