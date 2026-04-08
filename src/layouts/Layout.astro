@@ -1,17 +1,12 @@
-# src/layouts/Layout.astro (11527 bytes)
-
 ---
 import '../styles/global.css';
-
 interface Props {
   title: string;
   description?: string;
 }
-
 const { title, description = "Carbide Saws Inc. - Professional saw repair and sharpening service in High Point, NC. Serving NC, SC, VA and Eastern TN since 1954." } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://carbidesawsinc.com");
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,7 +83,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://carbides
           <a href="/about" class="nav-link">About</a>
           <a href="/contact" class="btn-primary">Contact Us</a>
         </div>
-
         <!-- Mobile Menu Button -->
         <button id="mobile-menu-btn" class="lg:hidden text-white p-2" aria-label="Toggle menu">
           <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,7 +94,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://carbides
         </button>
       </div>
     </div>
-
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="lg:hidden hidden bg-primary border-t border-secondary/50">
       <div class="px-4 py-6 space-y-4">
@@ -119,12 +112,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://carbides
       </div>
     </div>
   </nav>
-
   <!-- Main Content -->
   <main class="pt-20">
     <slot />
   </main>
-
   <!-- Footer -->
   <footer class="bg-primary text-white py-16 mt-20 border-t border-secondary/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -189,20 +180,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://carbides
       </div>
     </div>
   </footer>
-
   <script>
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
-
     mobileMenuBtn?.addEventListener('click', () => {
       mobileMenu?.classList.toggle('hidden');
       menuIcon?.classList.toggle('hidden');
       closeIcon?.classList.toggle('hidden');
     });
-
     // Close menu when clicking a link
     mobileMenu?.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
