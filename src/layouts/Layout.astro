@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { title, description = "Carbide Saws Inc. - Professional saw repair and sharpening service in High Point, NC. Serving NC, SC, VA and Eastern TN since 1954." } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://carbidesawsinc.com");
 ---
 
 <!DOCTYPE html>
